@@ -1,3 +1,5 @@
+Imports proyecto_delta.DataSet1TableAdapters
+
 Public Class frmPROCESOCRUD
     Inherits System.Windows.Forms.Form
 
@@ -64,15 +66,6 @@ Public Class frmPROCESOCRUD
     Friend WithEvents tabDESCUENTO As System.Windows.Forms.TabPage
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents lblDOCUMENTODESC As System.Windows.Forms.Label
-    Friend WithEvents txtMONTODESC As System.Windows.Forms.TextBox
-    Friend WithEvents txtDOCUMENTODESC As System.Windows.Forms.TextBox
-    Friend WithEvents lblCONCEPTODESC As System.Windows.Forms.Label
-    Friend WithEvents lblFECHA2DESC As System.Windows.Forms.Label
-    Friend WithEvents lblFECHA1DESC As System.Windows.Forms.Label
-    Friend WithEvents lblMONTODESC As System.Windows.Forms.Label
-    Friend WithEvents lblNUMERODESC As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents btnMODIFICARDESC As System.Windows.Forms.Button
     Friend WithEvents btnELIMINARDEC As System.Windows.Forms.Button
@@ -87,14 +80,7 @@ Public Class frmPROCESOCRUD
     Friend WithEvents ESTADIO As System.Windows.Forms.ComboBox
     Friend WithEvents TabMOVIMIENTO As System.Windows.Forms.TabControl
     Friend WithEvents txtANHO As System.Windows.Forms.TextBox
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents datFECHADOC As System.Windows.Forms.DateTimePicker
-    Friend WithEvents CONCEPTODESC As System.Windows.Forms.ComboBox
-    Friend WithEvents txtNUMERODOC As System.Windows.Forms.TextBox
-    Friend WithEvents datFECHADESC As System.Windows.Forms.DateTimePicker
-    Friend WithEvents txtCUOTA As System.Windows.Forms.TextBox
     Friend WithEvents txtOBSERVABONO As System.Windows.Forms.RichTextBox
-    Friend WithEvents txtOBSERVADESC As System.Windows.Forms.RichTextBox
     Friend WithEvents chkBONO As System.Windows.Forms.CheckBox
     Friend WithEvents chkDESCUENTO As System.Windows.Forms.CheckBox
     Friend WithEvents txtMESCON As System.Windows.Forms.TextBox
@@ -125,10 +111,48 @@ Public Class frmPROCESOCRUD
     Friend WithEvents connombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents conmonto As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents contipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtCUOTA As System.Windows.Forms.TextBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents lblDOCUMENTODESC As System.Windows.Forms.Label
+    Friend WithEvents txtMONTODESC As System.Windows.Forms.TextBox
+    Friend WithEvents txtDOCUMENTODESC As System.Windows.Forms.TextBox
+    Friend WithEvents lblCONCEPTODESC As System.Windows.Forms.Label
+    Friend WithEvents lblFECHA2DESC As System.Windows.Forms.Label
+    Friend WithEvents datFECHADOC As System.Windows.Forms.DateTimePicker
+    Friend WithEvents CONCEPTODESC As System.Windows.Forms.ComboBox
+    Friend WithEvents lblFECHA1DESC As System.Windows.Forms.Label
+    Friend WithEvents lblMONTODESC As System.Windows.Forms.Label
+    Friend WithEvents txtNUMERODOC As System.Windows.Forms.TextBox
+    Friend WithEvents datFECHADESC As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lblNUMERODESC As System.Windows.Forms.Label
+    Friend WithEvents txtOBSERVADESC As System.Windows.Forms.RichTextBox
     Friend WithEvents colSeleccionadoArbitro As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents arbcedula As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents arbnombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents arbsituacion As System.Windows.Forms.DataGridViewTextBoxColumn
+    'Friend WithEvents DataSet4 As proyecto_delta.DataSet4
+    Friend WithEvents DeudaapagarBindingSource As System.Windows.Forms.BindingSource
+    'Friend WithEvents Deuda_apagarTableAdapter As proyecto_delta.DataSet4TableAdapters.deuda_apagarTableAdapter
+    Friend WithEvents DataSet11BindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents DataSet11BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DeudasApagarBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents tabDescontarPendiente As System.Windows.Forms.TabPage
+    Friend WithEvents grdDeudaApagar As System.Windows.Forms.DataGridView
+    Friend WithEvents btnDescontarPendientes As System.Windows.Forms.Button
+    Friend WithEvents DataSet12BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DataSet12 As proyecto_delta.DataSet1
+    Friend WithEvents DeudasApagarBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents DataSet13 As proyecto_delta.DataSet1
+    Friend WithEvents DeudasApagarTableAdapter As proyecto_delta.DataSet1TableAdapters.DeudasApagarTableAdapter
+    Friend WithEvents NombreDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ConceptoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SaldoapagarDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fechaalta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents aimputar As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents idfila As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents idconcepto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cedula As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtTORNEO As System.Windows.Forms.ComboBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -187,6 +211,9 @@ Public Class frmPROCESOCRUD
         Me.btnCANCELAR = New System.Windows.Forms.Button()
         Me.btnGUARDAR = New System.Windows.Forms.Button()
         Me.tabDESCUENTO = New System.Windows.Forms.TabPage()
+        Me.DeudasApagarBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet11BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet11 = New proyecto_delta.DataSet1()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtCUOTA = New System.Windows.Forms.TextBox()
@@ -206,28 +233,44 @@ Public Class frmPROCESOCRUD
         Me.lblNUMERODESC = New System.Windows.Forms.Label()
         Me.txtOBSERVADESC = New System.Windows.Forms.RichTextBox()
         Me.tabDeudaPendiente = New System.Windows.Forms.TabPage()
-        Me.dgvListaArbitros = New System.Windows.Forms.DataGridView()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ArbitroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet11 = New proyecto_delta.DataSet1()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.ArbitroTableAdapter1 = New proyecto_delta.DataSet1TableAdapters.arbitroTableAdapter()
-        Me.dgvListaConceptos = New System.Windows.Forms.DataGridView()
-        Me.DataSet2 = New proyecto_delta.DataSet2()
-        Me.ConceptoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ConceptoTableAdapter = New proyecto_delta.DataSet2TableAdapters.conceptoTableAdapter()
         Me.btnAsignarDeudas = New System.Windows.Forms.Button()
+        Me.dgvListaConceptos = New System.Windows.Forms.DataGridView()
         Me.colSeleccionadoDeuda = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.concodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.connombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.conmonto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.contipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ConceptoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet2 = New proyecto_delta.DataSet2()
+        Me.dgvListaArbitros = New System.Windows.Forms.DataGridView()
         Me.colSeleccionadoArbitro = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.arbcedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.arbnombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.arbsituacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArbitroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.ArbitroTableAdapter1 = New proyecto_delta.DataSet1TableAdapters.arbitroTableAdapter()
+        Me.ConceptoTableAdapter = New proyecto_delta.DataSet2TableAdapters.conceptoTableAdapter()
+        Me.DataSet11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.tabDescontarPendiente = New System.Windows.Forms.TabPage()
+        Me.grdDeudaApagar = New System.Windows.Forms.DataGridView()
+        Me.btnDescontarPendientes = New System.Windows.Forms.Button()
+        Me.DataSet12 = New proyecto_delta.DataSet1()
+        Me.DataSet12BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet13 = New proyecto_delta.DataSet1()
+        Me.DeudasApagarBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DeudasApagarTableAdapter = New proyecto_delta.DataSet1TableAdapters.DeudasApagarTableAdapter()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ConceptoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaldoapagarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechaalta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.aimputar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idfila = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idconcepto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox5.SuspendLayout()
         CType(Me.grdARBITRO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
@@ -239,15 +282,24 @@ Public Class frmPROCESOCRUD
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.tabDESCUENTO.SuspendLayout()
+        CType(Me.DeudasApagarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.tabDeudaPendiente.SuspendLayout()
+        CType(Me.dgvListaConceptos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ConceptoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvListaArbitros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.ArbitroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvListaConceptos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ConceptoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabDescontarPendiente.SuspendLayout()
+        CType(Me.grdDeudaApagar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet12BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeudasApagarBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox5
@@ -402,7 +454,7 @@ Public Class frmPROCESOCRUD
         Me.GroupBox3.Controls.Add(Me.btnCANCELARDESC)
         Me.GroupBox3.Controls.Add(Me.btnSALIRDESC)
         Me.GroupBox3.Controls.Add(Me.btnAGREGARDESC)
-        Me.GroupBox3.Location = New System.Drawing.Point(776, 56)
+        Me.GroupBox3.Location = New System.Drawing.Point(779, 49)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(128, 272)
         Me.GroupBox3.TabIndex = 40
@@ -448,7 +500,7 @@ Public Class frmPROCESOCRUD
         'btnAGREGARDESC
         '
         Me.btnAGREGARDESC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAGREGARDESC.Location = New System.Drawing.Point(7, 12)
+        Me.btnAGREGARDESC.Location = New System.Drawing.Point(6, 9)
         Me.btnAGREGARDESC.Name = "btnAGREGARDESC"
         Me.btnAGREGARDESC.Size = New System.Drawing.Size(113, 32)
         Me.btnAGREGARDESC.TabIndex = 55
@@ -459,6 +511,7 @@ Public Class frmPROCESOCRUD
         Me.TabMOVIMIENTO.Controls.Add(Me.tabBONO)
         Me.TabMOVIMIENTO.Controls.Add(Me.tabDESCUENTO)
         Me.TabMOVIMIENTO.Controls.Add(Me.tabDeudaPendiente)
+        Me.TabMOVIMIENTO.Controls.Add(Me.tabDescontarPendiente)
         Me.TabMOVIMIENTO.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabMOVIMIENTO.Location = New System.Drawing.Point(8, 24)
         Me.TabMOVIMIENTO.Name = "TabMOVIMIENTO"
@@ -837,12 +890,25 @@ Public Class frmPROCESOCRUD
         Me.tabDESCUENTO.Text = "DESCUENTO"
         Me.tabDESCUENTO.Visible = False
         '
+        'DeudasApagarBindingSource
+        '
+        '
+        'DataSet11BindingSource1
+        '
+        Me.DataSet11BindingSource1.DataSource = Me.DataSet11
+        Me.DataSet11BindingSource1.Position = 0
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet11"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label15
         '
         Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(16, 24)
+        Me.Label15.Location = New System.Drawing.Point(16, 19)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(696, 32)
         Me.Label15.TabIndex = 39
@@ -1054,66 +1120,14 @@ Public Class frmPROCESOCRUD
         Me.tabDeudaPendiente.Text = "DEUDA PENDIENTE"
         Me.tabDeudaPendiente.UseVisualStyleBackColor = True
         '
-        'dgvListaArbitros
+        'btnAsignarDeudas
         '
-        Me.dgvListaArbitros.AllowUserToAddRows = False
-        Me.dgvListaArbitros.AutoGenerateColumns = False
-        Me.dgvListaArbitros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListaArbitros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSeleccionadoArbitro, Me.arbcedula, Me.arbnombre, Me.arbsituacion})
-        Me.dgvListaArbitros.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.dgvListaArbitros.DataSource = Me.ArbitroBindingSource
-        Me.dgvListaArbitros.Location = New System.Drawing.Point(6, 7)
-        Me.dgvListaArbitros.Name = "dgvListaArbitros"
-        Me.dgvListaArbitros.Size = New System.Drawing.Size(302, 281)
-        Me.dgvListaArbitros.TabIndex = 0
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(182, 48)
-        Me.ContextMenuStrip1.Text = "seleccionar todos"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
-        Me.ToolStripMenuItem1.Text = "seleccionar todos"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(181, 22)
-        Me.ToolStripMenuItem2.Text = "seleccionar ninguno"
-        '
-        'ArbitroBindingSource
-        '
-        Me.ArbitroBindingSource.DataMember = "arbitro"
-        Me.ArbitroBindingSource.DataSource = Me.DataSet11
-        Me.ArbitroBindingSource.Filter = "arbsituacion = 'Activo'"
-        Me.ArbitroBindingSource.Sort = "arbnombre asc"
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet11"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label17
-        '
-        Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(8, 8)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(920, 32)
-        Me.Label17.TabIndex = 42
-        Me.Label17.Text = "CARGA DE BONOS Y DESCUENTOS"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ArbitroTableAdapter1
-        '
-        Me.ArbitroTableAdapter1.ClearBeforeFill = True
+        Me.btnAsignarDeudas.Location = New System.Drawing.Point(594, 7)
+        Me.btnAsignarDeudas.Name = "btnAsignarDeudas"
+        Me.btnAsignarDeudas.Size = New System.Drawing.Size(139, 23)
+        Me.btnAsignarDeudas.TabIndex = 2
+        Me.btnAsignarDeudas.Text = "Asignar Deudas"
+        Me.btnAsignarDeudas.UseVisualStyleBackColor = True
         '
         'dgvListaConceptos
         '
@@ -1125,31 +1139,6 @@ Public Class frmPROCESOCRUD
         Me.dgvListaConceptos.Name = "dgvListaConceptos"
         Me.dgvListaConceptos.Size = New System.Drawing.Size(274, 281)
         Me.dgvListaConceptos.TabIndex = 1
-        '
-        'DataSet2
-        '
-        Me.DataSet2.DataSetName = "DataSet2"
-        Me.DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ConceptoBindingSource
-        '
-        Me.ConceptoBindingSource.DataMember = "concepto"
-        Me.ConceptoBindingSource.DataSource = Me.DataSet2
-        Me.ConceptoBindingSource.Filter = "contipo = 'D'"
-        Me.ConceptoBindingSource.Sort = "connombre asc"
-        '
-        'ConceptoTableAdapter
-        '
-        Me.ConceptoTableAdapter.ClearBeforeFill = True
-        '
-        'btnAsignarDeudas
-        '
-        Me.btnAsignarDeudas.Location = New System.Drawing.Point(594, 7)
-        Me.btnAsignarDeudas.Name = "btnAsignarDeudas"
-        Me.btnAsignarDeudas.Size = New System.Drawing.Size(139, 23)
-        Me.btnAsignarDeudas.TabIndex = 2
-        Me.btnAsignarDeudas.Text = "Asignar Deudas"
-        Me.btnAsignarDeudas.UseVisualStyleBackColor = True
         '
         'colSeleccionadoDeuda
         '
@@ -1183,6 +1172,31 @@ Public Class frmPROCESOCRUD
         Me.contipo.Name = "contipo"
         Me.contipo.Visible = False
         '
+        'ConceptoBindingSource
+        '
+        Me.ConceptoBindingSource.DataMember = "concepto"
+        Me.ConceptoBindingSource.DataSource = Me.DataSet2
+        Me.ConceptoBindingSource.Filter = "contipo = 'D'"
+        Me.ConceptoBindingSource.Sort = "connombre asc"
+        '
+        'DataSet2
+        '
+        Me.DataSet2.DataSetName = "DataSet2"
+        Me.DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'dgvListaArbitros
+        '
+        Me.dgvListaArbitros.AllowUserToAddRows = False
+        Me.dgvListaArbitros.AutoGenerateColumns = False
+        Me.dgvListaArbitros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListaArbitros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSeleccionadoArbitro, Me.arbcedula, Me.arbnombre, Me.arbsituacion})
+        Me.dgvListaArbitros.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.dgvListaArbitros.DataSource = Me.ArbitroBindingSource
+        Me.dgvListaArbitros.Location = New System.Drawing.Point(6, 7)
+        Me.dgvListaArbitros.Name = "dgvListaArbitros"
+        Me.dgvListaArbitros.Size = New System.Drawing.Size(302, 281)
+        Me.dgvListaArbitros.TabIndex = 0
+        '
         'colSeleccionadoArbitro
         '
         Me.colSeleccionadoArbitro.HeaderText = "Sel"
@@ -1208,6 +1222,171 @@ Public Class frmPROCESOCRUD
         Me.arbsituacion.HeaderText = "arbsituacion"
         Me.arbsituacion.Name = "arbsituacion"
         Me.arbsituacion.Visible = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(182, 48)
+        Me.ContextMenuStrip1.Text = "seleccionar todos"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
+        Me.ToolStripMenuItem1.Text = "seleccionar todos"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(181, 22)
+        Me.ToolStripMenuItem2.Text = "seleccionar ninguno"
+        '
+        'ArbitroBindingSource
+        '
+        Me.ArbitroBindingSource.DataMember = "arbitro"
+        Me.ArbitroBindingSource.DataSource = Me.DataSet11
+        Me.ArbitroBindingSource.Filter = "arbsituacion = 'Activo'"
+        Me.ArbitroBindingSource.Sort = "arbnombre asc"
+        '
+        'Label17
+        '
+        Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.White
+        Me.Label17.Location = New System.Drawing.Point(8, 8)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(920, 32)
+        Me.Label17.TabIndex = 42
+        Me.Label17.Text = "CARGA DE BONOS Y DESCUENTOS"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ArbitroTableAdapter1
+        '
+        Me.ArbitroTableAdapter1.ClearBeforeFill = True
+        '
+        'ConceptoTableAdapter
+        '
+        Me.ConceptoTableAdapter.ClearBeforeFill = True
+        '
+        'DataSet11BindingSource
+        '
+        Me.DataSet11BindingSource.DataSource = Me.DataSet11
+        Me.DataSet11BindingSource.Position = 0
+        '
+        'tabDescontarPendiente
+        '
+        Me.tabDescontarPendiente.Controls.Add(Me.btnDescontarPendientes)
+        Me.tabDescontarPendiente.Controls.Add(Me.grdDeudaApagar)
+        Me.tabDescontarPendiente.Location = New System.Drawing.Point(4, 25)
+        Me.tabDescontarPendiente.Name = "tabDescontarPendiente"
+        Me.tabDescontarPendiente.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabDescontarPendiente.Size = New System.Drawing.Size(736, 291)
+        Me.tabDescontarPendiente.TabIndex = 3
+        Me.tabDescontarPendiente.Text = "Descontar Pendiente"
+        Me.tabDescontarPendiente.UseVisualStyleBackColor = True
+        '
+        'grdDeudaApagar
+        '
+        Me.grdDeudaApagar.AutoGenerateColumns = False
+        Me.grdDeudaApagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdDeudaApagar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombreDataGridViewTextBoxColumn, Me.ConceptoDataGridViewTextBoxColumn, Me.SaldoapagarDataGridViewTextBoxColumn, Me.fechaalta, Me.aimputar, Me.idfila, Me.idconcepto, Me.cedula})
+        Me.grdDeudaApagar.DataSource = Me.DeudasApagarBindingSource1
+        Me.grdDeudaApagar.Location = New System.Drawing.Point(6, 6)
+        Me.grdDeudaApagar.Name = "grdDeudaApagar"
+        Me.grdDeudaApagar.Size = New System.Drawing.Size(564, 237)
+        Me.grdDeudaApagar.TabIndex = 41
+        '
+        'btnDescontarPendientes
+        '
+        Me.btnDescontarPendientes.Location = New System.Drawing.Point(576, 6)
+        Me.btnDescontarPendientes.Name = "btnDescontarPendientes"
+        Me.btnDescontarPendientes.Size = New System.Drawing.Size(154, 23)
+        Me.btnDescontarPendientes.TabIndex = 42
+        Me.btnDescontarPendientes.Text = "Descontar Pendientes"
+        Me.btnDescontarPendientes.UseVisualStyleBackColor = True
+        '
+        'DataSet12
+        '
+        Me.DataSet12.DataSetName = "DataSet1"
+        Me.DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataSet12BindingSource
+        '
+        Me.DataSet12BindingSource.DataSource = Me.DataSet12
+        Me.DataSet12BindingSource.Position = 0
+        '
+        'DataSet13
+        '
+        Me.DataSet13.DataSetName = "DataSet1"
+        Me.DataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DeudasApagarBindingSource1
+        '
+        Me.DeudasApagarBindingSource1.DataMember = "DeudasApagar"
+        Me.DeudasApagarBindingSource1.DataSource = Me.DataSet13
+        '
+        'DeudasApagarTableAdapter
+        '
+        Me.DeudasApagarTableAdapter.ClearBeforeFill = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ConceptoDataGridViewTextBoxColumn
+        '
+        Me.ConceptoDataGridViewTextBoxColumn.DataPropertyName = "concepto"
+        Me.ConceptoDataGridViewTextBoxColumn.HeaderText = "concepto"
+        Me.ConceptoDataGridViewTextBoxColumn.Name = "ConceptoDataGridViewTextBoxColumn"
+        Me.ConceptoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaldoapagarDataGridViewTextBoxColumn
+        '
+        Me.SaldoapagarDataGridViewTextBoxColumn.DataPropertyName = "saldoapagar"
+        Me.SaldoapagarDataGridViewTextBoxColumn.HeaderText = "saldoapagar"
+        Me.SaldoapagarDataGridViewTextBoxColumn.Name = "SaldoapagarDataGridViewTextBoxColumn"
+        Me.SaldoapagarDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'fechaalta
+        '
+        Me.fechaalta.DataPropertyName = "fechaalta"
+        Me.fechaalta.HeaderText = "fechaalta"
+        Me.fechaalta.Name = "fechaalta"
+        Me.fechaalta.ReadOnly = True
+        '
+        'aimputar
+        '
+        Me.aimputar.HeaderText = "A Imputar"
+        Me.aimputar.Name = "aimputar"
+        '
+        'idfila
+        '
+        Me.idfila.DataPropertyName = "id"
+        Me.idfila.HeaderText = "id"
+        Me.idfila.Name = "idfila"
+        Me.idfila.ReadOnly = True
+        Me.idfila.Visible = False
+        '
+        'idconcepto
+        '
+        Me.idconcepto.DataPropertyName = "idconcepto"
+        Me.idconcepto.HeaderText = "idconcepto"
+        Me.idconcepto.Name = "idconcepto"
+        Me.idconcepto.ReadOnly = True
+        Me.idconcepto.Visible = False
+        '
+        'cedula
+        '
+        Me.cedula.DataPropertyName = "cedula"
+        Me.cedula.HeaderText = "cedula"
+        Me.cedula.Name = "cedula"
+        Me.cedula.ReadOnly = True
+        Me.cedula.Visible = False
         '
         'frmPROCESOCRUD
         '
@@ -1237,16 +1416,25 @@ Public Class frmPROCESOCRUD
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.tabDESCUENTO.ResumeLayout(False)
+        CType(Me.DeudasApagarBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet11BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.tabDeudaPendiente.ResumeLayout(False)
+        CType(Me.dgvListaConceptos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ConceptoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvListaArbitros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.ArbitroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvListaConceptos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ConceptoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabDescontarPendiente.ResumeLayout(False)
+        CType(Me.grdDeudaApagar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet12BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeudasApagarBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1267,6 +1455,12 @@ Public Class frmPROCESOCRUD
     End Sub
 
     Private Sub frmPROCESOCRUD_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DataSet11.DeudasApagar' table. You can move, or remove it, as needed.
+        'Me.DeudasApagarTableAdapter.Fill(Me.DataSet11.DeudasApagar)
+        'TODO: This line of code loads data into the 'DataSet4.deuda_apagar' table. You can move, or remove it, as needed.
+        'Me.Deuda_apagarTableAdapter.Fill(Me.DataSet4.deuda_apagar)
+        'TODO: This line of code loads data into the 'DataSet3.deuda_apagar' table. You can move, or remove it, as needed.
+        'Me.Deuda_apagarTableAdapter.Fill(Me.DataSet3.deuda_apagar)
         'TODO: This line of code loads data into the 'DataSet2.concepto' table. You can move, or remove it, as needed.
         Me.ConceptoTableAdapter.Fill(Me.DataSet2.concepto)
         'TODO: This line of code loads data into the 'DataSet11.arbitro' table. You can move, or remove it, as needed.
@@ -1357,6 +1551,7 @@ Public Class frmPROCESOCRUD
             AbrirConexion()
             cargarMovimiento(wkarbcedula, 1)
             setEstiloMovimiento()
+            cargarDeudasPendientesArbitro()
             CerrarConexion()
         End If
         glocedula = 0
@@ -1366,6 +1561,19 @@ Public Class frmPROCESOCRUD
         gloconcepto = 0
         glomovid = 0
     End Sub
+
+    Private Sub cargarDeudasPendientesArbitro()
+
+        ' Bind the DataGridView to the BindingSource
+        ' and load the data from the database.
+        Dim asdf As New DataSet1TableAdapters.DeudasApagarTableAdapter
+        Me.grdDeudaApagar.DataSource = asdf.GetData(grdARBITRO.Item(grdARBITRO.CurrentRowIndex, 0))
+        For Each filaDeudas As DataGridViewRow In Me.grdDeudaApagar.Rows
+            filaDeudas.Cells.Item("aimputar").Value = "0"
+        Next
+
+    End Sub
+
     Private Sub setEstiloMovimiento()
         Dim estilos As New DataGridTableStyle
         Dim xcolor As New Color
@@ -2206,6 +2414,100 @@ Public Class frmPROCESOCRUD
         End If
         validarBono = blnerror
     End Function
+
+    Sub grabarDescuento2(filadeuda As DataGridViewRow)
+        'If validarDescuento() = True Then
+        Dim wkconcepto, wkmonto, wknumerodoc, wkcuota As Integer
+        Dim wkfecha, wkdocumento, wktipo, wkdocfecha, wkobservadesc As String
+
+        wkconcepto = Val(filadeuda.Cells.Item("idconcepto").Value)
+        wkmonto = Val(filadeuda.Cells.Item("aimputar").Value)
+        wkfecha = Format(filadeuda.Cells.Item("fechaalta").Value, "yyyy-MM-dd")
+
+        wkarbcedula = Trim(filadeuda.Cells.Item("cedula").Value)
+        wkdocumento = ""
+        wkdocfecha = Format(filadeuda.Cells.Item("fechaalta").Value, "yyyy-MM-dd")
+        wknumerodoc = 0
+        wkcuota = 0
+        wkobservadesc = ""
+
+
+        'If glocedula > 0 Then
+        '    blnEXISTE = True
+        'Else
+        '    blnEXISTE = False
+        'End If
+        blnEXISTE = False
+
+        wktipo = "D"
+
+        Try
+            AbrirConexion()
+
+
+            'comando para actualizar el saldo
+            strSQL = "update deuda_apagar set saldo = saldo - " & wkmonto & _
+                      " where id = " & filadeuda.Cells.Item("idfila").Value
+
+            Dim myCommand As New Odbc.OdbcCommand(strSQL, ca_cn)
+            myCommand.ExecuteNonQuery()
+            myCommand.Dispose()
+
+
+            If blnEXISTE = False Then
+                strSQL = "INSERT INTO movmensual (movcedula, movconcepto, movmonto, movfecha, " & _
+                                      "movdocumento, movdocfecha, movdocnumero, movcuota, " & _
+                                      "movtipo, movobservaciones) " & _
+                              "VALUES (" & wkarbcedula & ", " & wkconcepto & _
+                              ", " & wkmonto & ", '" & wkfecha & _
+                              "', '" & wkdocumento & "', '" & wkdocfecha & _
+                              "', " & wknumerodoc & ", " & wkcuota & _
+                              ", '" & wktipo & _
+                              "', '" & wkobservadesc & "')"
+            Else
+                strSQL = "UPDATE movmensual SET " & _
+                "movcedula = " & wkarbcedula & ", " & _
+                "movconcepto = " & wkconcepto & ", " & _
+                "movmonto = " & wkmonto & ", " & _
+                "movfecha = '" & wkfecha & " ', " & _
+                "movdocumento = '" & wkdocumento & "', " & _
+                "movdocfecha = '" & wkdocfecha & "', " & _
+                "movdocnumero = " & wknumerodoc & ", " & _
+                "movcuota = " & wkcuota & ", " & _
+                "movtipo = '" & wktipo & "', " & _
+                "movobservaciones = '" & wkobservadesc & "' " & _
+                "WHERE movcedula = " & glocedula & " and " & _
+                "movconcepto = " & gloconcepto & " and " & _
+                "movfecha = '" & glofecha & "' and " & _
+                "movtipo = '" & glotipo & "'"
+            End If
+
+            myCommand = New Odbc.OdbcCommand(strSQL, ca_cn)
+            myCommand.ExecuteNonQuery()
+            myCommand.Dispose()
+
+
+
+            cargarMovimiento(wkarbcedula, 1)
+            setEstiloMovimiento()
+            CerrarConexion()
+
+            MessageBox.Show("Registro ha sido grabado satisfactoriamente!", strSLOGAN, MessageBoxButtons.OK)
+            limpiarDescuento()
+
+            glocedula = 0
+            glofecha = ""
+            glomonto = 0
+            glotipo = 0
+            gloconcepto = 0
+
+        Catch err As Exception
+            MessageBox.Show(err.Message & "Error en la Grabación del registro. Verifiquelo!!", strSLOGAN, MessageBoxButtons.OK)
+            'End
+        End Try
+
+        'End If
+    End Sub
 
 
     Sub grabarDescuento()
@@ -3049,5 +3351,36 @@ Public Class frmPROCESOCRUD
         Next
         CerrarConexion()
         MessageBox.Show("Los registros se cargaron de manera exitosa", strSLOGAN, MessageBoxButtons.OK)
+    End Sub
+
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs)
+        Try
+            ''Me.Deuda_apagarTableAdapter.FillBy(Me.DataSet3.deuda_apagar)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub DeudasApagarBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles DeudasApagarBindingSource.CurrentChanged
+
+    End Sub
+
+    Private Sub btnDescontarPendientes_Click(sender As Object, e As EventArgs) Handles btnDescontarPendientes.Click
+
+
+        For Each filaDeudas As DataGridViewRow In Me.grdDeudaApagar.Rows
+            Dim aux As Integer
+            If Not Integer.TryParse(filaDeudas.Cells.Item("aimputar").Value, aux) Then
+                aux = -1
+            End If
+            If (aux > 0) Then
+
+                grabarDescuento2(filaDeudas)
+
+            End If
+        Next
+
+
     End Sub
 End Class
