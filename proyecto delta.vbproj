@@ -206,6 +206,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmCONTADURIA2.Designer.vb">
+      <DependentUpon>frmCONTADURIA2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCONTADURIA2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAUTOFACTURA.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCONTADURIA.resx">
       <DependentUpon>frmCONTADURIA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCONTADURIA2.resx">
+      <DependentUpon>frmCONTADURIA2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDATOS.resx">
       <DependentUpon>frmDATOS.vb</DependentUpon>
