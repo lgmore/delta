@@ -83,78 +83,101 @@ Public Class frmMENU
     Friend WithEvents mnuDISKETTE As System.Windows.Forms.MenuItem
     Friend WithEvents mnuBANCOS As System.Windows.Forms.MenuItem
     Friend WithEvents mnuDISKETTES As System.Windows.Forms.MenuItem
+    Friend WithEvents mnuINFORMESCONTADURIA2 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents mnuINFORMEPENDIENTES As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
     Friend WithEvents mnuFACTURAS As System.Windows.Forms.MenuItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(frmMENU))
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMENU))
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.StatusBar1 = New System.Windows.Forms.StatusBar
-        Me.mnuHABILITAR = New System.Windows.Forms.ContextMenu
-        Me.mnuSOCIO = New System.Windows.Forms.MenuItem
-        Me.mnuUSUARIO = New System.Windows.Forms.MenuItem
-        Me.mnuCODIGOS = New System.Windows.Forms.MenuItem
-        Me.mnuSALIR = New System.Windows.Forms.ContextMenu
-        Me.mnuSI = New System.Windows.Forms.MenuItem
-        Me.mnuNO = New System.Windows.Forms.MenuItem
-        Me.ToolBar1 = New System.Windows.Forms.ToolBar
-        Me.tbbHABILITACION = New System.Windows.Forms.ToolBarButton
-        Me.tbbSEPARADOR = New System.Windows.Forms.ToolBarButton
-        Me.tbbCARGAR = New System.Windows.Forms.ToolBarButton
-        Me.mnuCARGAR = New System.Windows.Forms.ContextMenu
-        Me.mnuBONO = New System.Windows.Forms.MenuItem
-        Me.mnuAUTOFACTURA = New System.Windows.Forms.MenuItem
-        Me.mnuEMISIONRECIBO = New System.Windows.Forms.MenuItem
-        Me.tbbSEPARADOR1 = New System.Windows.Forms.ToolBarButton
-        Me.tbbINFORMES = New System.Windows.Forms.ToolBarButton
-        Me.mnuINFORMES = New System.Windows.Forms.ContextMenu
-        Me.mnuRECIBO = New System.Windows.Forms.MenuItem
-        Me.mnuPLANILLAAPF = New System.Windows.Forms.MenuItem
-        Me.mnuPLANILLACONTADURIA = New System.Windows.Forms.MenuItem
-        Me.tbbSEPARADOR2 = New System.Windows.Forms.ToolBarButton
-        Me.tbbREPORTE = New System.Windows.Forms.ToolBarButton
-        Me.mnuREPORTE = New System.Windows.Forms.ContextMenu
-        Me.mnuRECIBODINERO = New System.Windows.Forms.MenuItem
-        Me.mnuFACURAREP = New System.Windows.Forms.MenuItem
-        Me.mnuSOCIOPROMO = New System.Windows.Forms.MenuItem
-        Me.tbbSEPARADOR3 = New System.Windows.Forms.ToolBarButton
-        Me.tbbSALIR = New System.Windows.Forms.ToolBarButton
-        Me.MainMenu1 = New System.Windows.Forms.MainMenu
-        Me.mnuHABILITACION = New System.Windows.Forms.MenuItem
-        Me.mnuSOCIOS = New System.Windows.Forms.MenuItem
-        Me.mnuUSUARIOS = New System.Windows.Forms.MenuItem
-        Me.mnuCÓDIGOS = New System.Windows.Forms.MenuItem
-        Me.mnuCARGAS = New System.Windows.Forms.MenuItem
-        Me.mnuBONOS_DESC = New System.Windows.Forms.MenuItem
-        Me.mnuAUTOFACTURAS = New System.Windows.Forms.MenuItem
-        Me.mnuRECIBOS = New System.Windows.Forms.MenuItem
-        Me.mnuFACTURA = New System.Windows.Forms.MenuItem
-        Me.mnuINFORME = New System.Windows.Forms.MenuItem
-        Me.mnuRECIBOLIQUI = New System.Windows.Forms.MenuItem
-        Me.mnuINFORMEAPF = New System.Windows.Forms.MenuItem
-        Me.mnuINDORMESCONTADURIA = New System.Windows.Forms.MenuItem
-        Me.mnuREPORTES = New System.Windows.Forms.MenuItem
-        Me.mnuRECIBOREP = New System.Windows.Forms.MenuItem
-        Me.mnuAUTOFACTURAREP = New System.Windows.Forms.MenuItem
-        Me.mnuSOCIOPROMOCION = New System.Windows.Forms.MenuItem
-        Me.mnuBANCO = New System.Windows.Forms.MenuItem
-        Me.mnuDISKETTE = New System.Windows.Forms.MenuItem
-        Me.mnuSALIRSIST = New System.Windows.Forms.MenuItem
-        Me.mnuBANCOS = New System.Windows.Forms.MenuItem
-        Me.mnuDISKETTES = New System.Windows.Forms.MenuItem
-        Me.mnuFACTURAS = New System.Windows.Forms.MenuItem
+        Me.StatusBar1 = New System.Windows.Forms.StatusBar()
+        Me.mnuHABILITAR = New System.Windows.Forms.ContextMenu()
+        Me.mnuSOCIO = New System.Windows.Forms.MenuItem()
+        Me.mnuUSUARIO = New System.Windows.Forms.MenuItem()
+        Me.mnuCODIGOS = New System.Windows.Forms.MenuItem()
+        Me.mnuSALIR = New System.Windows.Forms.ContextMenu()
+        Me.mnuSI = New System.Windows.Forms.MenuItem()
+        Me.mnuNO = New System.Windows.Forms.MenuItem()
+        Me.ToolBar1 = New System.Windows.Forms.ToolBar()
+        Me.tbbHABILITACION = New System.Windows.Forms.ToolBarButton()
+        Me.tbbSEPARADOR = New System.Windows.Forms.ToolBarButton()
+        Me.tbbCARGAR = New System.Windows.Forms.ToolBarButton()
+        Me.mnuCARGAR = New System.Windows.Forms.ContextMenu()
+        Me.mnuBONO = New System.Windows.Forms.MenuItem()
+        Me.mnuAUTOFACTURA = New System.Windows.Forms.MenuItem()
+        Me.mnuEMISIONRECIBO = New System.Windows.Forms.MenuItem()
+        Me.mnuFACTURAS = New System.Windows.Forms.MenuItem()
+        Me.tbbSEPARADOR1 = New System.Windows.Forms.ToolBarButton()
+        Me.tbbINFORMES = New System.Windows.Forms.ToolBarButton()
+        Me.mnuINFORMES = New System.Windows.Forms.ContextMenu()
+        Me.mnuRECIBO = New System.Windows.Forms.MenuItem()
+        Me.mnuPLANILLAAPF = New System.Windows.Forms.MenuItem()
+        Me.mnuPLANILLACONTADURIA = New System.Windows.Forms.MenuItem()
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.tbbSEPARADOR2 = New System.Windows.Forms.ToolBarButton()
+        Me.tbbREPORTE = New System.Windows.Forms.ToolBarButton()
+        Me.mnuREPORTE = New System.Windows.Forms.ContextMenu()
+        Me.mnuRECIBODINERO = New System.Windows.Forms.MenuItem()
+        Me.mnuFACURAREP = New System.Windows.Forms.MenuItem()
+        Me.mnuSOCIOPROMO = New System.Windows.Forms.MenuItem()
+        Me.mnuBANCOS = New System.Windows.Forms.MenuItem()
+        Me.mnuDISKETTES = New System.Windows.Forms.MenuItem()
+        Me.tbbSEPARADOR3 = New System.Windows.Forms.ToolBarButton()
+        Me.tbbSALIR = New System.Windows.Forms.ToolBarButton()
+        Me.MainMenu1 = New System.Windows.Forms.MainMenu(Me.components)
+        Me.mnuHABILITACION = New System.Windows.Forms.MenuItem()
+        Me.mnuSOCIOS = New System.Windows.Forms.MenuItem()
+        Me.mnuUSUARIOS = New System.Windows.Forms.MenuItem()
+        Me.mnuCÓDIGOS = New System.Windows.Forms.MenuItem()
+        Me.mnuCARGAS = New System.Windows.Forms.MenuItem()
+        Me.mnuBONOS_DESC = New System.Windows.Forms.MenuItem()
+        Me.mnuAUTOFACTURAS = New System.Windows.Forms.MenuItem()
+        Me.mnuRECIBOS = New System.Windows.Forms.MenuItem()
+        Me.mnuFACTURA = New System.Windows.Forms.MenuItem()
+        Me.mnuINFORME = New System.Windows.Forms.MenuItem()
+        Me.mnuRECIBOLIQUI = New System.Windows.Forms.MenuItem()
+        Me.mnuINFORMEAPF = New System.Windows.Forms.MenuItem()
+        Me.mnuINDORMESCONTADURIA = New System.Windows.Forms.MenuItem()
+        Me.mnuINFORMESCONTADURIA2 = New System.Windows.Forms.MenuItem()
+        Me.mnuINFORMEPENDIENTES = New System.Windows.Forms.MenuItem()
+        Me.mnuREPORTES = New System.Windows.Forms.MenuItem()
+        Me.mnuRECIBOREP = New System.Windows.Forms.MenuItem()
+        Me.mnuAUTOFACTURAREP = New System.Windows.Forms.MenuItem()
+        Me.mnuSOCIOPROMOCION = New System.Windows.Forms.MenuItem()
+        Me.mnuBANCO = New System.Windows.Forms.MenuItem()
+        Me.mnuDISKETTE = New System.Windows.Forms.MenuItem()
+        Me.mnuSALIRSIST = New System.Windows.Forms.MenuItem()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.SuspendLayout()
         '
         'ImageList1
         '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(25, 25)
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "")
+        Me.ImageList1.Images.SetKeyName(1, "")
+        Me.ImageList1.Images.SetKeyName(2, "")
+        Me.ImageList1.Images.SetKeyName(3, "")
+        Me.ImageList1.Images.SetKeyName(4, "")
+        Me.ImageList1.Images.SetKeyName(5, "")
+        Me.ImageList1.Images.SetKeyName(6, "")
+        Me.ImageList1.Images.SetKeyName(7, "")
+        Me.ImageList1.Images.SetKeyName(8, "")
+        Me.ImageList1.Images.SetKeyName(9, "")
+        Me.ImageList1.Images.SetKeyName(10, "")
+        Me.ImageList1.Images.SetKeyName(11, "")
+        Me.ImageList1.Images.SetKeyName(12, "")
+        Me.ImageList1.Images.SetKeyName(13, "")
+        Me.ImageList1.Images.SetKeyName(14, "")
+        Me.ImageList1.Images.SetKeyName(15, "")
+        Me.ImageList1.Images.SetKeyName(16, "")
         '
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 709)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 591)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Size = New System.Drawing.Size(936, 16)
         Me.StatusBar1.TabIndex = 0
@@ -202,24 +225,27 @@ Public Class frmMENU
         Me.ToolBar1.Location = New System.Drawing.Point(0, 0)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(936, 51)
+        Me.ToolBar1.Size = New System.Drawing.Size(936, 59)
         Me.ToolBar1.TabIndex = 1
         '
         'tbbHABILITACION
         '
         Me.tbbHABILITACION.DropDownMenu = Me.mnuHABILITAR
         Me.tbbHABILITACION.ImageIndex = 16
+        Me.tbbHABILITACION.Name = "tbbHABILITACION"
         Me.tbbHABILITACION.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton
         Me.tbbHABILITACION.Text = "HABILITACION"
         '
         'tbbSEPARADOR
         '
+        Me.tbbSEPARADOR.Name = "tbbSEPARADOR"
         Me.tbbSEPARADOR.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
         '
         'tbbCARGAR
         '
         Me.tbbCARGAR.DropDownMenu = Me.mnuCARGAR
         Me.tbbCARGAR.ImageIndex = 15
+        Me.tbbCARGAR.Name = "tbbCARGAR"
         Me.tbbCARGAR.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton
         Me.tbbCARGAR.Text = "CARGAR"
         '
@@ -242,20 +268,27 @@ Public Class frmMENU
         Me.mnuEMISIONRECIBO.Index = 2
         Me.mnuEMISIONRECIBO.Text = "EMISION DE RECIBO"
         '
+        'mnuFACTURAS
+        '
+        Me.mnuFACTURAS.Index = 3
+        Me.mnuFACTURAS.Text = "FACTURA"
+        '
         'tbbSEPARADOR1
         '
+        Me.tbbSEPARADOR1.Name = "tbbSEPARADOR1"
         Me.tbbSEPARADOR1.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
         '
         'tbbINFORMES
         '
         Me.tbbINFORMES.DropDownMenu = Me.mnuINFORMES
         Me.tbbINFORMES.ImageIndex = 1
+        Me.tbbINFORMES.Name = "tbbINFORMES"
         Me.tbbINFORMES.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton
         Me.tbbINFORMES.Text = "INFORMES"
         '
         'mnuINFORMES
         '
-        Me.mnuINFORMES.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBO, Me.mnuPLANILLAAPF, Me.mnuPLANILLACONTADURIA})
+        Me.mnuINFORMES.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBO, Me.mnuPLANILLAAPF, Me.mnuPLANILLACONTADURIA, Me.MenuItem1, Me.MenuItem2})
         '
         'mnuRECIBO
         '
@@ -272,14 +305,21 @@ Public Class frmMENU
         Me.mnuPLANILLACONTADURIA.Index = 2
         Me.mnuPLANILLACONTADURIA.Text = "PLANILLA PARA CONTADURIA"
         '
+        'MenuItem1
+        '
+        Me.MenuItem1.Index = 3
+        Me.MenuItem1.Text = "PLANILLA PARA CONTADURIA NUEVO"
+        '
         'tbbSEPARADOR2
         '
+        Me.tbbSEPARADOR2.Name = "tbbSEPARADOR2"
         Me.tbbSEPARADOR2.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
         '
         'tbbREPORTE
         '
         Me.tbbREPORTE.DropDownMenu = Me.mnuREPORTE
         Me.tbbREPORTE.ImageIndex = 14
+        Me.tbbREPORTE.Name = "tbbREPORTE"
         Me.tbbREPORTE.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton
         Me.tbbREPORTE.Text = "REPORTE"
         '
@@ -302,14 +342,26 @@ Public Class frmMENU
         Me.mnuSOCIOPROMO.Index = 2
         Me.mnuSOCIOPROMO.Text = "SOCIO POR PROMOCIÓN"
         '
+        'mnuBANCOS
+        '
+        Me.mnuBANCOS.Index = 3
+        Me.mnuBANCOS.Text = "BANCO"
+        '
+        'mnuDISKETTES
+        '
+        Me.mnuDISKETTES.Index = 4
+        Me.mnuDISKETTES.Text = "DISKETTE"
+        '
         'tbbSEPARADOR3
         '
+        Me.tbbSEPARADOR3.Name = "tbbSEPARADOR3"
         Me.tbbSEPARADOR3.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
         '
         'tbbSALIR
         '
         Me.tbbSALIR.DropDownMenu = Me.mnuSALIR
         Me.tbbSALIR.ImageIndex = 0
+        Me.tbbSALIR.Name = "tbbSALIR"
         Me.tbbSALIR.Style = System.Windows.Forms.ToolBarButtonStyle.DropDownButton
         Me.tbbSALIR.Text = "SALIR"
         '
@@ -367,7 +419,7 @@ Public Class frmMENU
         'mnuINFORME
         '
         Me.mnuINFORME.Index = 2
-        Me.mnuINFORME.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBOLIQUI, Me.mnuINFORMEAPF, Me.mnuINDORMESCONTADURIA})
+        Me.mnuINFORME.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBOLIQUI, Me.mnuINFORMEAPF, Me.mnuINDORMESCONTADURIA, Me.mnuINFORMESCONTADURIA2, Me.mnuINFORMEPENDIENTES})
         Me.mnuINFORME.Text = "INFORMES"
         '
         'mnuRECIBOLIQUI
@@ -384,6 +436,16 @@ Public Class frmMENU
         '
         Me.mnuINDORMESCONTADURIA.Index = 2
         Me.mnuINDORMESCONTADURIA.Text = "INFORMES PARA CONTADURIA"
+        '
+        'mnuINFORMESCONTADURIA2
+        '
+        Me.mnuINFORMESCONTADURIA2.Index = 3
+        Me.mnuINFORMESCONTADURIA2.Text = "INFORMES PARA CONTADURIA NUEVO"
+        '
+        'mnuINFORMEPENDIENTES
+        '
+        Me.mnuINFORMEPENDIENTES.Index = 4
+        Me.mnuINFORMEPENDIENTES.Text = "INFORME DE DEUDAS PENDIENTES"
         '
         'mnuREPORTES
         '
@@ -421,26 +483,16 @@ Public Class frmMENU
         Me.mnuSALIRSIST.Index = 4
         Me.mnuSALIRSIST.Text = "SALIR "
         '
-        'mnuBANCOS
+        'MenuItem2
         '
-        Me.mnuBANCOS.Index = 3
-        Me.mnuBANCOS.Text = "BANCO"
-        '
-        'mnuDISKETTES
-        '
-        Me.mnuDISKETTES.Index = 4
-        Me.mnuDISKETTES.Text = "DISKETTE"
-        '
-        'mnuFACTURAS
-        '
-        Me.mnuFACTURAS.Index = 3
-        Me.mnuFACTURAS.Text = "FACTURA"
+        Me.MenuItem2.Index = 4
+        Me.MenuItem2.Text = "INFORME DE DEUDAS PENDIENTES"
         '
         'frmMENU
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(10, 24)
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(936, 725)
+        Me.ClientSize = New System.Drawing.Size(936, 607)
         Me.Controls.Add(Me.ToolBar1)
         Me.Controls.Add(Me.StatusBar1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -450,12 +502,13 @@ Public Class frmMENU
         Me.Text = "MENU DE ADMINISTRACION ""CIRCULO PARAGUAYO DE ARBITROS DE FUTBOLL"""
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
 #End Region
 
-    
+
     Private Sub mnuSI_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuSI.Click
         Call CerrarConexion()
         'MessageBox.Show(" ¿ESTAS SEGURO QUE DESEA SALIR DEL SISTEMA ? ", strSLOGAN)
@@ -643,6 +696,36 @@ Public Class frmMENU
 
     Private Sub mnuDISKETTES_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuDISKETTES.Click
         Dim frmnew As New frmDISKETE
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem1_Click(sender As Object, e As EventArgs) Handles mnuINFORMESCONTADURIA2.Click
+        Dim frmnew As New frmDEUDASPENDIENTES2
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub ToolBar1_ButtonClick(sender As Object, e As ToolBarButtonClickEventArgs) Handles ToolBar1.ButtonClick
+
+    End Sub
+
+    Private Sub MenuItem1_Click_1(sender As Object, e As EventArgs) Handles MenuItem1.Click
+        Dim frmnew As New frmDEUDASPENDIENTES2
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub mnuINFORMEPENDIENTES_Click(sender As Object, e As EventArgs) Handles mnuINFORMEPENDIENTES.Click
+        Dim frmnew As New frmDEUDASPENDIENTES
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub mnuINFORMES_Popup(sender As Object, e As EventArgs) Handles mnuINFORMES.Popup
+
+    End Sub
+
+    Private Sub MenuItem2_Click(sender As Object, e As EventArgs) Handles MenuItem2.Click
+        Dim frmnew As New frmDEUDASPENDIENTES
+
         frmnew.ShowDialog(Me)
     End Sub
 End Class

@@ -70,10 +70,26 @@
       <Project>{F401F355-9D93-4EE7-A1C9-4F5C84DE5ACC}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <Name>CrystalDecisions.CrystalReports.Engine</Name>
+      <HintPath>..\..\..\..\..\Archivos de programa\Archivos comunes\Crystal Decisions\1.1\Managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <Name>CrystalDecisions.ReportSource</Name>
+      <HintPath>..\..\..\..\..\Archivos de programa\Archivos comunes\Crystal Decisions\1.1\Managed\CrystalDecisions.ReportSource.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <Name>CrystalDecisions.Shared</Name>
+      <HintPath>..\..\..\..\..\Archivos de programa\Archivos comunes\Crystal Decisions\1.1\Managed\CrystalDecisions.Shared.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <Name>CrystalDecisions.Windows.Forms</Name>
+      <HintPath>..\..\..\..\..\Archivos de programa\Archivos comunes\Crystal Decisions\1.1\Managed\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -137,12 +153,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="crpDEUDASPENDIENTES.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crpDEUDASPENDIENTES.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="crpFACTURA1.vb">
       <DependentUpon>crpFACTURA.rpt</DependentUpon>
       <SubType>Component</SubType>
@@ -156,7 +166,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="crpINFORMECONTADURIA2.vb">
-      <DependentUpon>crpINFORMECONTADURIA2.rpt</DependentUpon>
+      <DependentUpon>crpINFORMECONTADURIA.rpt</DependentUpon>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -199,9 +209,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSet1.vb">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -212,17 +219,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmDEUDASPENDIENTES.Designer.vb">
-      <DependentUpon>frmDEUDASPENDIENTES.vb</DependentUpon>
+    <Compile Include="DataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmDEUDASPENDIENTES.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCONTADURIA2.Designer.vb">
-      <DependentUpon>frmCONTADURIA2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmCONTADURIA2.vb">
-      <SubType>Form</SubType>
+    <Compile Include="DataSet4.vb">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmAUTOFACTURA.vb">
       <SubType>Form</SubType>
@@ -311,80 +314,65 @@
     <Compile Include="modMAIN.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <EmbeddedResource Include="crpARBITROSPROMOCION.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpARBITROSPROMOCION.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpAUTOFACTURA.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpAUTOFACTURA1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpAUTOFACTURAREP.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpAUTOFACTURAREP.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpBANCO.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpBANCO1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpBANCO2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpBANCO21.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crpDEUDASPENDIENTES.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crpDEUDASPENDIENTES.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="crpFACTURA.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpFACTURA1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpFACTURAREP.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpFACTURAREP1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpINFORMECONTADURIA.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crpINFORMECONTADURIA2.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="crpINFORMECONTADURIA2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpINFORMECONTADURIA2.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpPAGOARBITROS.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpPAGOARBITROS1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpRECIBO.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpRECIBO1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpRECIBOLIQUIDACION.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpRECIBOLIQUIDACION.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpRECIBOLIQUIDACIONFINAL.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpRECIBOLIQUIDACIONFINAL.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crpRECIBOREP.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpRECIBOREP1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUDcodigos.resx">
       <DependentUpon>CRUDcodigos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDEUDASPENDIENTES.resx">
-      <DependentUpon>frmDEUDASPENDIENTES.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAUTOFACTURA.resx">
       <DependentUpon>frmAUTOFACTURA.vb</DependentUpon>
@@ -403,9 +391,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCONTADURIA.resx">
       <DependentUpon>frmCONTADURIA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCONTADURIA2.resx">
-      <DependentUpon>frmCONTADURIA2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDATOS.resx">
       <DependentUpon>frmDATOS.vb</DependentUpon>
@@ -466,7 +451,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
     <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
   </ItemGroup>
   <ItemGroup>
@@ -504,16 +488,21 @@
     <None Include="DataSet3.xss">
       <DependentUpon>DataSet3.xsd</DependentUpon>
     </None>
+    <None Include="DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Settings.settings">
       <CustomToolNamespace>My</CustomToolNamespace>
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\Application.myapp">
-      <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -503,7 +503,8 @@ Public Class frmCONTADURIA
         ca_cn2.Close()
         ca_cn2.Dispose()
 
-        Dim reporte As New crpINFORMECONTADURIA
+        Dim reporte As New crpINFORMECONTADURIA2
+
         Me.crpREPORTE.ReportSource = reporte
 
     End Sub
@@ -529,7 +530,7 @@ Public Class frmCONTADURIA
             Dim auxiliarmontofinal As Integer
             Dim auxiliarmontoasignado As Integer
 
-            strSQL = "SELECT mancodigo,manmontoinicial,manmontofinal,manmontoasignado from mantenimientocapital"
+            strSQL = "SELECT mancodigo,manmontoinicial,manmontofinal,manmontoasignado from mantenimiento_capital_corte1"
             ca_cn2 = New Odbc.OdbcConnection(strCADENA)
             ca_cn2.Open()
 

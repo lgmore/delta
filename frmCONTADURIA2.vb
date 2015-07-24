@@ -1,4 +1,4 @@
-﻿Public Class frmCONTADURIA2
+﻿Public Class frmDEUDASPENDIENTES2
     Class auxcodigonombre
         Public indice As Integer
         Public codigo As Integer
@@ -73,7 +73,7 @@
 
         Dim arrayauxiliar(9) As auxcodigonombre
 
-        strSQL = "insert into auxtitulosinformecontaduria (titulo1,titulo1cod,fechainicio,fechafin) values ('',0,'" & Me.dtpFECHAINICIO.Value.ToString("dd/MM/yyyy") & "','" & Me.dtpFECHAFIN.Value.ToString("dd/MM/yyyy") & "')"
+        strSQL = "insert into auxtitulosinformecontaduria (titulo1,titulo1cod,fechainicio,fechafin) values ('',0,'" & Me.DateTimePicker1.Value.ToString("dd/MM/yyyy") & "','" & Me.DateTimePicker2.Value.ToString("dd/MM/yyyy") & "')"
         ca_cn2 = New Odbc.OdbcConnection(strCADENA)
         ca_cn2.Open()
 
@@ -121,7 +121,7 @@
                                                     "titulo7cod=" & arrayauxiliar(7).codigo & "," & _
                                                     "titulo8='" & arrayauxiliar(8).nombre & "'," & _
                                                     "titulo8cod=" & arrayauxiliar(8).codigo & " " & _
-                                                    " where fechainicio= '" & Me.dtpFECHAINICIO.Value.ToString("dd/MM/yyyy") & "'"
+                                                    " where fechainicio= '" & Me.DateTimePicker1.Value.ToString("dd/MM/yyyy") & "'"
         ca_cn2 = New Odbc.OdbcConnection(strCADENA)
         ca_cn2.Open()
         mycommand2 = New Odbc.OdbcCommand(strSQL, ca_cn2)
@@ -134,7 +134,7 @@
         Dim X As Integer
 
         Try
-            strSQL = "select arbcedula,arbnombre from arbitro"
+            strSQL = "select arbcedula,arbnombre from arbitro order by arbnombre asc"
             ca_cn2 = New Odbc.OdbcConnection(strCADENA)
             ca_cn2.ConnectionTimeout = 0
             ca_cn2.Open()
@@ -165,7 +165,7 @@
                 Next X
 
                 strSQL = "select movconcepto,movmonto,movtipo from movmensual where movcedula= " & arbcedula & _
-                " and (movfecha >= '" & Me.dtpFECHAINICIO.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.dtpFECHAFIN.Value.Date.ToString("yyyy-MM-dd") & "') "
+                " and (movfecha >= '" & Me.DateTimePicker1.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.DateTimePicker2.Value.Date.ToString("yyyy-MM-dd") & "') "
                 ca_cn3 = New Odbc.OdbcConnection(strCADENA)
                 ca_cn3.ConnectionTimeout = 0
                 ca_cn3.Open()
@@ -250,7 +250,7 @@
 
                 'strSQL = "select sum(movmonto) as monto from movmensual where movtipo='D'and movcedula= " & arbcedula & " and  movconcepto not in (" & _
                 'arraycargados(1) & "," & arraycargados(2) & "," & arraycargados(3) & "," & arraycargados(4) & "," & arraycargados(5) & "," & arraycargados(6) & "," & arraycargados(7) & "," & arraycargados(8) & ") " & _
-                '"and (movfecha >= '" & Me.dtpFECHAINICIO.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.dtpFECHAFIN.Value.Date.ToString("yyyy-MM-dd") & "') "
+                '"and (movfecha >= '" & me.DateTimePicker1.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & me.DateTimePicker2.Value.Date.ToString("yyyy-MM-dd") & "') "
                 'ca_cn3 = New Odbc.OdbcConnection(strCADENA)
                 'ca_cn3.Open()
 
@@ -290,7 +290,7 @@
 
                 ''DESGLOSE DE LOS BONOS PARA GENERAR EL INFORME
                 'strSQL = "select movmonto from movmensual where movcedula= " & arbcedula & " and  movtipo='B'" & _
-                '"and (movfecha >= '" & Me.dtpFECHAINICIO.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.dtpFECHAFIN.Value.Date.ToString("yyyy-MM-dd") & "') "
+                '"and (movfecha >= '" & me.DateTimePicker1.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & me.DateTimePicker2.Value.Date.ToString("yyyy-MM-dd") & "') "
                 'ca_cn3 = New Odbc.OdbcConnection(strCADENA)
                 'ca_cn3.Open()
 
@@ -342,7 +342,7 @@
         ca_cn2.Close()
         ca_cn2.Dispose()
 
-        Dim reporte As New crpINFORMECONTADURIA
+        Dim reporte As New crpINFORMECONTADURIA2
         Me.crpREPORTE.ReportSource = reporte
     End Sub
 

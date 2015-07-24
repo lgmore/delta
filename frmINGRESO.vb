@@ -44,21 +44,22 @@ Public Class frmINGRESO
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(frmINGRESO))
-        Me.txtPASSWORD = New System.Windows.Forms.TextBox
-        Me.lblUsuario = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtUSUARIO = New System.Windows.Forms.TextBox
-        Me.btnACEPTAR = New System.Windows.Forms.Button
-        Me.btnSALIR = New System.Windows.Forms.Button
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.lblBIENVENIDA = New System.Windows.Forms.Label
-        Me.btnINGRESAR = New System.Windows.Forms.Button
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmINGRESO))
+        Me.txtPASSWORD = New System.Windows.Forms.TextBox()
+        Me.lblUsuario = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtUSUARIO = New System.Windows.Forms.TextBox()
+        Me.btnACEPTAR = New System.Windows.Forms.Button()
+        Me.btnSALIR = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblBIENVENIDA = New System.Windows.Forms.Label()
+        Me.btnINGRESAR = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,10 +68,9 @@ Public Class frmINGRESO
         Me.txtPASSWORD.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPASSWORD.Location = New System.Drawing.Point(288, 512)
         Me.txtPASSWORD.Name = "txtPASSWORD"
-        Me.txtPASSWORD.PasswordChar = Microsoft.VisualBasic.ChrW(42)
+        Me.txtPASSWORD.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPASSWORD.Size = New System.Drawing.Size(248, 29)
         Me.txtPASSWORD.TabIndex = 1
-        Me.txtPASSWORD.Text = ""
         '
         'lblUsuario
         '
@@ -103,10 +103,9 @@ Public Class frmINGRESO
         Me.txtUSUARIO.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUSUARIO.Location = New System.Drawing.Point(288, 472)
         Me.txtUSUARIO.Name = "txtUSUARIO"
-        Me.txtUSUARIO.PasswordChar = Microsoft.VisualBasic.ChrW(42)
+        Me.txtUSUARIO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtUSUARIO.Size = New System.Drawing.Size(248, 29)
         Me.txtUSUARIO.TabIndex = 0
-        Me.txtUSUARIO.Text = ""
         '
         'btnACEPTAR
         '
@@ -119,6 +118,7 @@ Public Class frmINGRESO
         Me.btnACEPTAR.Size = New System.Drawing.Size(96, 24)
         Me.btnACEPTAR.TabIndex = 2
         Me.btnACEPTAR.Text = "&INGRESAR"
+        Me.btnACEPTAR.UseVisualStyleBackColor = False
         '
         'btnSALIR
         '
@@ -131,6 +131,7 @@ Public Class frmINGRESO
         Me.btnSALIR.Size = New System.Drawing.Size(96, 24)
         Me.btnSALIR.TabIndex = 3
         Me.btnSALIR.Text = "&SALIR"
+        Me.btnSALIR.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -197,7 +198,7 @@ Public Class frmINGRESO
         'frmINGRESO
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(720, 638)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
@@ -214,8 +215,10 @@ Public Class frmINGRESO
         Me.Name = "frmINGRESO"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "&SALIR"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 

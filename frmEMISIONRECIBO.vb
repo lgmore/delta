@@ -493,14 +493,14 @@ Public Class frmEMISIONRECIBO
 
             strSQL = "SELECT movmonto,movfecha,movtipo,movequipo1,movequipo2,movestadio,movcuota,movfechapartida," & _
                        "movconcepto,movcedula,movobservaciones from movmensual where " & _
-                        " (movfecha >= '" & Me.dtpFECHAINICIO.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.dtpFECHAFIN.Value.Date.ToString("yyyy-MM-dd") & "' and movcedula=" & Me.txtCEDULA.Text & ") order by movfecha asc"
+                        " (movfecha >= '" & Me.dtpFECHAINICIO.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.dtpFECHAFIN.Value.Date.ToString("yyyy-MM-dd") & "' and movcedula=" & Me.txtCEDULA.Text & ") order by movid asc"
 
 
         Catch ex As Exception
 
             strSQL = "SELECT movmonto,movfecha,movtipo,movequipo1,movequipo2,movestadio,movcuota,movfechapartida," & _
                                      "movconcepto,movcedula,movobservaciones from movmensual where " & _
-                                     " (movfecha >= '" & Me.dtpFECHAINICIO.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.dtpFECHAFIN.Value.Date.ToString("yyyy-MM-dd") & "') order by movfecha asc"
+                                     " (movfecha >= '" & Me.dtpFECHAINICIO.Value.Date.ToString("yyyy-MM-dd") & "' and movfecha <='" & Me.dtpFECHAFIN.Value.Date.ToString("yyyy-MM-dd") & "') order by movid asc"
 
         End Try
         ca_cn2 = New Odbc.OdbcConnection(strCADENA)
