@@ -281,8 +281,7 @@ Partial Public Class DataSet2
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class conceptoDataTable
-        Inherits Global.System.Data.DataTable
-        Implements Global.System.Collections.IEnumerable
+        Inherits Global.System.Data.TypedTableBase(Of conceptoRow)
         
         Private columnconcodigo As Global.System.Data.DataColumn
         
@@ -291,6 +290,8 @@ Partial Public Class DataSet2
         Private columnconmonto As Global.System.Data.DataColumn
         
         Private columncontipo As Global.System.Data.DataColumn
+        
+        Private columnDataColumn1 As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -360,6 +361,14 @@ Partial Public Class DataSet2
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DataColumn1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDataColumn1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -396,9 +405,9 @@ Partial Public Class DataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddconceptoRow(ByVal concodigo As Decimal, ByVal connombre As String, ByVal conmonto As Decimal, ByVal contipo As String) As conceptoRow
+        Public Overloads Function AddconceptoRow(ByVal concodigo As Decimal, ByVal connombre As String, ByVal conmonto As Decimal, ByVal contipo As String, ByVal DataColumn1 As String) As conceptoRow
             Dim rowconceptoRow As conceptoRow = CType(Me.NewRow,conceptoRow)
-            Dim columnValuesArray() As Object = New Object() {concodigo, connombre, conmonto, contipo}
+            Dim columnValuesArray() As Object = New Object() {concodigo, connombre, conmonto, contipo, DataColumn1}
             rowconceptoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowconceptoRow)
             Return rowconceptoRow
@@ -408,12 +417,6 @@ Partial Public Class DataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function FindByconcodigo(ByVal concodigo As Decimal) As conceptoRow
             Return CType(Me.Rows.Find(New Object() {concodigo}),conceptoRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
-            Return Me.Rows.GetEnumerator
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -437,6 +440,7 @@ Partial Public Class DataSet2
             Me.columnconnombre = MyBase.Columns("connombre")
             Me.columnconmonto = MyBase.Columns("conmonto")
             Me.columncontipo = MyBase.Columns("contipo")
+            Me.columnDataColumn1 = MyBase.Columns("DataColumn1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -450,6 +454,8 @@ Partial Public Class DataSet2
             MyBase.Columns.Add(Me.columnconmonto)
             Me.columncontipo = New Global.System.Data.DataColumn("contipo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncontipo)
+            Me.columnDataColumn1 = New Global.System.Data.DataColumn("DataColumn1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDataColumn1)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnconcodigo}, true))
             Me.columnconcodigo.AllowDBNull = false
             Me.columnconcodigo.Unique = true
@@ -657,6 +663,21 @@ Partial Public Class DataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DataColumn1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableconcepto.DataColumn1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DataColumn1' in table 'concepto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableconcepto.DataColumn1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsconnombreNull() As Boolean
             Return Me.IsNull(Me.tableconcepto.connombreColumn)
         End Function
@@ -689,6 +710,18 @@ Partial Public Class DataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetcontipoNull()
             Me(Me.tableconcepto.contipoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDataColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableconcepto.DataColumn1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDataColumn1Null()
+            Me(Me.tableconcepto.DataColumn1Column) = Global.System.Convert.DBNull
         End Sub
     End Class
     

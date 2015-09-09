@@ -25,10 +25,11 @@
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <MyType>WindowsFormsWithCustomSubMain</MyType>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -46,6 +47,7 @@
     <WarningLevel>1</WarningLevel>
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -63,6 +65,7 @@
     <WarningLevel>1</WarningLevel>
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\claseNUMEROALETRA\claseNUMEROALETRA.csproj">
@@ -80,6 +83,7 @@
     <Reference Include="System.Data">
       <Name>System.Data</Name>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
@@ -161,6 +165,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="crpIVA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpIVA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="crpPAGOARBITROS1.vb">
       <DependentUpon>crpPAGOARBITROS.rpt</DependentUpon>
       <SubType>Component</SubType>
@@ -191,6 +201,30 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="crpRENDICIONTESORERIA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpRENDICIONTESORERIA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crpREPORTESOCIOSALDIA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpREPORTESOCIOSALDIA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crpREPORTESOCIOSALDIA2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpREPORTESOCIOSALDIA2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crpREPORTESOCIOSALDIA3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpREPORTESOCIOSALDIA3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CRUDcodigos.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -207,10 +241,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet2.vb">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet3.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCRUDEQUIPOS.vb" />
+    <Compile Include="frmIVA.Designer.vb">
+      <DependentUpon>frmIVA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIVA.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDEUDASPENDIENTES.Designer.vb">
       <DependentUpon>frmDEUDASPENDIENTES.vb</DependentUpon>
@@ -290,6 +340,18 @@
     <Compile Include="frmREPORTES.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSOCIOSALDIA.Designer.vb">
+      <DependentUpon>frmSOCIOSALDIA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOCIOSALDIA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOCIOSMOROSOS.Designer.vb">
+      <DependentUpon>frmSOCIOSMOROSOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOCIOSMOROSOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSOCIOSPROMOCION.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +422,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpINFORMECONTADURIA2.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="crpIVA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpIVA.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="crpPAGOARBITROS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpPAGOARBITROS1.vb</LastGenOutput>
@@ -380,8 +446,27 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpRECIBOREP1.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="crpRENDICIONTESORERIA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpRENDICIONTESORERIA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpREPORTESOCIOSALDIA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpREPORTESOCIOSALDIA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpREPORTESOCIOSALDIA2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpREPORTESOCIOSALDIA2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpREPORTESOCIOSALDIA3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpREPORTESOCIOSALDIA3.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUDcodigos.resx">
       <DependentUpon>CRUDcodigos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIVA.resx">
+      <DependentUpon>frmIVA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDEUDASPENDIENTES.resx">
       <DependentUpon>frmDEUDASPENDIENTES.vb</DependentUpon>
@@ -454,6 +539,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmREPORTES.resx">
       <DependentUpon>frmREPORTES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOCIOSALDIA.resx">
+      <DependentUpon>frmSOCIOSALDIA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOCIOSMOROSOS.resx">
+      <DependentUpon>frmSOCIOSMOROSOS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSOCIOSPROMOCION.resx">
       <DependentUpon>frmSOCIOSPROMOCION.vb</DependentUpon>

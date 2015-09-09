@@ -72,7 +72,6 @@ Public Class frmPROCESOCRUD
     Friend WithEvents btnCANCELARDESC As System.Windows.Forms.Button
     Friend WithEvents btnSALIRDESC As System.Windows.Forms.Button
     Friend WithEvents btnAGREGARDESC As System.Windows.Forms.Button
-    Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents grdMOVIMIENTO As System.Windows.Forms.DataGrid
     Friend WithEvents CONCEPTO As System.Windows.Forms.ComboBox
     Friend WithEvents EQUIPO1 As System.Windows.Forms.ComboBox
@@ -106,11 +105,6 @@ Public Class frmPROCESOCRUD
     Friend WithEvents ConceptoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ConceptoTableAdapter As proyecto_delta.DataSet2TableAdapters.conceptoTableAdapter
     Friend WithEvents btnAsignarDeudas As System.Windows.Forms.Button
-    Friend WithEvents colSeleccionadoDeuda As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents concodigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents connombre As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents conmonto As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents contipo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtCUOTA As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -153,6 +147,21 @@ Public Class frmPROCESOCRUD
     Friend WithEvents arbcedula As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents arbnombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents arbsituacion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents txtIDDESC As System.Windows.Forms.TextBox
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents dtpFECHAIMPUTAR As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ttFECHAIMPUTAR As System.Windows.Forms.ToolTip
+    Friend WithEvents colSeleccionadoDeuda As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents concodigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents connombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents conmonto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents contipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents confechavenc As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents dtpTodasLasFechas As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtTORNEO As System.Windows.Forms.ComboBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -180,6 +189,8 @@ Public Class frmPROCESOCRUD
         Me.tabBONO = New System.Windows.Forms.TabPage()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.txtTORNEO = New System.Windows.Forms.ComboBox()
         Me.DIVISION = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -211,6 +222,8 @@ Public Class frmPROCESOCRUD
         Me.btnCANCELAR = New System.Windows.Forms.Button()
         Me.btnGUARDAR = New System.Windows.Forms.Button()
         Me.tabDESCUENTO = New System.Windows.Forms.TabPage()
+        Me.txtIDDESC = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtCUOTA = New System.Windows.Forms.TextBox()
@@ -237,15 +250,22 @@ Public Class frmPROCESOCRUD
         Me.connombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.conmonto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.contipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.confechavenc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ConceptoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet2 = New proyecto_delta.DataSet2()
         Me.dgvListaArbitros = New System.Windows.Forms.DataGridView()
+        Me.colSeleccionadoArbitro = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.arbcedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.arbnombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.arbsituacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArbitroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11 = New proyecto_delta.DataSet1()
         Me.tabDescontarPendiente = New System.Windows.Forms.TabPage()
+        Me.dtpFECHAIMPUTAR = New System.Windows.Forms.DateTimePicker()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.btnDescontarPendientes = New System.Windows.Forms.Button()
         Me.grdDeudaApagar = New System.Windows.Forms.DataGridView()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -260,17 +280,15 @@ Public Class frmPROCESOCRUD
         Me.DataSet13 = New proyecto_delta.DataSet1()
         Me.DeudasApagarBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.ArbitroTableAdapter1 = New proyecto_delta.DataSet1TableAdapters.arbitroTableAdapter()
         Me.ConceptoTableAdapter = New proyecto_delta.DataSet2TableAdapters.conceptoTableAdapter()
         Me.DataSet11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet12 = New proyecto_delta.DataSet1()
         Me.DataSet12BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DeudasApagarTableAdapter = New proyecto_delta.DataSet1TableAdapters.DeudasApagarTableAdapter()
-        Me.colSeleccionadoArbitro = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.arbcedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.arbnombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.arbsituacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ttFECHAIMPUTAR = New System.Windows.Forms.ToolTip(Me.components)
+        Me.dtpTodasLasFechas = New System.Windows.Forms.DateTimePicker()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.GroupBox5.SuspendLayout()
         CType(Me.grdARBITRO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
@@ -304,13 +322,14 @@ Public Class frmPROCESOCRUD
         '
         'GroupBox5
         '
+        Me.GroupBox5.AutoSize = True
         Me.GroupBox5.Controls.Add(Me.txtbusqueda)
         Me.GroupBox5.Controls.Add(Me.Label14)
         Me.GroupBox5.Controls.Add(Me.grdARBITRO)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.Location = New System.Drawing.Point(8, 56)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(384, 136)
+        Me.GroupBox5.Size = New System.Drawing.Size(523, 141)
         Me.GroupBox5.TabIndex = 38
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "PANEL DE BUSQUEDA"
@@ -346,6 +365,7 @@ Public Class frmPROCESOCRUD
         '
         'GroupBox6
         '
+        Me.GroupBox6.AutoSize = True
         Me.GroupBox6.Controls.Add(Me.Label19)
         Me.GroupBox6.Controls.Add(Me.btnCONSULTAR)
         Me.GroupBox6.Controls.Add(Me.txtMESCON)
@@ -355,9 +375,9 @@ Public Class frmPROCESOCRUD
         Me.GroupBox6.Controls.Add(Me.chkBONO)
         Me.GroupBox6.Controls.Add(Me.grdMOVIMIENTO)
         Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(392, 56)
+        Me.GroupBox6.Location = New System.Drawing.Point(8, 208)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(536, 136)
+        Me.GroupBox6.Size = New System.Drawing.Size(529, 361)
         Me.GroupBox6.TabIndex = 40
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "MOVIMIENTOS"
@@ -431,49 +451,49 @@ Public Class frmPROCESOCRUD
         Me.grdMOVIMIENTO.Location = New System.Drawing.Point(9, 46)
         Me.grdMOVIMIENTO.Name = "grdMOVIMIENTO"
         Me.grdMOVIMIENTO.ReadOnly = True
-        Me.grdMOVIMIENTO.Size = New System.Drawing.Size(514, 75)
+        Me.grdMOVIMIENTO.Size = New System.Drawing.Size(514, 294)
         Me.grdMOVIMIENTO.TabIndex = 12
         '
         'GroupBox7
         '
         Me.GroupBox7.Controls.Add(Me.GroupBox3)
         Me.GroupBox7.Controls.Add(Me.TabMOVIMIENTO)
+        Me.GroupBox7.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox7.Location = New System.Drawing.Point(8, 200)
+        Me.GroupBox7.Location = New System.Drawing.Point(266, 0)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(920, 360)
+        Me.GroupBox7.Size = New System.Drawing.Size(758, 565)
         Me.GroupBox7.TabIndex = 41
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "CARGA DEMOVIMIENTOS"
         '
         'GroupBox3
         '
-        Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GroupBox3.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox3.Controls.Add(Me.btnMODIFICARDESC)
         Me.GroupBox3.Controls.Add(Me.btnELIMINARDEC)
         Me.GroupBox3.Controls.Add(Me.btnCANCELARDESC)
         Me.GroupBox3.Controls.Add(Me.btnSALIRDESC)
         Me.GroupBox3.Controls.Add(Me.btnAGREGARDESC)
-        Me.GroupBox3.Location = New System.Drawing.Point(779, 49)
+        Me.GroupBox3.Location = New System.Drawing.Point(47, 410)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(128, 272)
+        Me.GroupBox3.Size = New System.Drawing.Size(369, 90)
         Me.GroupBox3.TabIndex = 40
         Me.GroupBox3.TabStop = False
         '
         'btnMODIFICARDESC
         '
         Me.btnMODIFICARDESC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMODIFICARDESC.Location = New System.Drawing.Point(7, 159)
+        Me.btnMODIFICARDESC.Location = New System.Drawing.Point(246, 9)
         Me.btnMODIFICARDESC.Name = "btnMODIFICARDESC"
         Me.btnMODIFICARDESC.Size = New System.Drawing.Size(113, 32)
         Me.btnMODIFICARDESC.TabIndex = 59
         Me.btnMODIFICARDESC.Text = "MODIFICAR "
-        Me.btnMODIFICARDESC.Visible = False
         '
         'btnELIMINARDEC
         '
         Me.btnELIMINARDEC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnELIMINARDEC.Location = New System.Drawing.Point(6, 47)
+        Me.btnELIMINARDEC.Location = New System.Drawing.Point(127, 9)
         Me.btnELIMINARDEC.Name = "btnELIMINARDEC"
         Me.btnELIMINARDEC.Size = New System.Drawing.Size(113, 32)
         Me.btnELIMINARDEC.TabIndex = 56
@@ -482,7 +502,7 @@ Public Class frmPROCESOCRUD
         'btnCANCELARDESC
         '
         Me.btnCANCELARDESC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCANCELARDESC.Location = New System.Drawing.Point(7, 85)
+        Me.btnCANCELARDESC.Location = New System.Drawing.Point(6, 47)
         Me.btnCANCELARDESC.Name = "btnCANCELARDESC"
         Me.btnCANCELARDESC.Size = New System.Drawing.Size(113, 32)
         Me.btnCANCELARDESC.TabIndex = 57
@@ -491,7 +511,7 @@ Public Class frmPROCESOCRUD
         'btnSALIRDESC
         '
         Me.btnSALIRDESC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSALIRDESC.Location = New System.Drawing.Point(8, 123)
+        Me.btnSALIRDESC.Location = New System.Drawing.Point(127, 47)
         Me.btnSALIRDESC.Name = "btnSALIRDESC"
         Me.btnSALIRDESC.Size = New System.Drawing.Size(113, 32)
         Me.btnSALIRDESC.TabIndex = 58
@@ -516,7 +536,7 @@ Public Class frmPROCESOCRUD
         Me.TabMOVIMIENTO.Location = New System.Drawing.Point(8, 24)
         Me.TabMOVIMIENTO.Name = "TabMOVIMIENTO"
         Me.TabMOVIMIENTO.SelectedIndex = 0
-        Me.TabMOVIMIENTO.Size = New System.Drawing.Size(744, 320)
+        Me.TabMOVIMIENTO.Size = New System.Drawing.Size(744, 365)
         Me.TabMOVIMIENTO.TabIndex = 38
         '
         'tabBONO
@@ -526,13 +546,13 @@ Public Class frmPROCESOCRUD
         Me.tabBONO.Controls.Add(Me.GroupBox2)
         Me.tabBONO.Location = New System.Drawing.Point(4, 25)
         Me.tabBONO.Name = "tabBONO"
-        Me.tabBONO.Size = New System.Drawing.Size(736, 291)
+        Me.tabBONO.Size = New System.Drawing.Size(736, 336)
         Me.tabBONO.TabIndex = 0
         Me.tabBONO.Text = "BONO"
         '
         'Label13
         '
-        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label13.BackColor = System.Drawing.SystemColors.Control
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label13.Location = New System.Drawing.Point(16, 24)
@@ -544,7 +564,9 @@ Public Class frmPROCESOCRUD
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Controls.Add(Me.txtID)
+        Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.txtTORNEO)
         Me.GroupBox1.Controls.Add(Me.DIVISION)
         Me.GroupBox1.Controls.Add(Me.Label20)
@@ -571,9 +593,30 @@ Public Class frmPROCESOCRUD
         Me.GroupBox1.Controls.Add(Me.EQUIPO2)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 66)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(709, 219)
+        Me.GroupBox1.Size = New System.Drawing.Size(709, 256)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
+        '
+        'txtID
+        '
+        Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(127, 144)
+        Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
+        Me.txtID.Size = New System.Drawing.Size(88, 22)
+        Me.txtID.TabIndex = 35
+        '
+        'Label17
+        '
+        Me.Label17.BackColor = System.Drawing.Color.Silver
+        Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label17.Location = New System.Drawing.Point(19, 144)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(104, 23)
+        Me.Label17.TabIndex = 34
+        Me.Label17.Text = "ID"
         '
         'txtTORNEO
         '
@@ -675,7 +718,7 @@ Public Class frmPROCESOCRUD
         Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(19, 145)
+        Me.Label11.Location = New System.Drawing.Point(19, 179)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(176, 23)
         Me.Label11.TabIndex = 10
@@ -796,7 +839,7 @@ Public Class frmPROCESOCRUD
         '
         Me.txtOBSERVABONO.BackColor = System.Drawing.Color.White
         Me.txtOBSERVABONO.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOBSERVABONO.Location = New System.Drawing.Point(19, 169)
+        Me.txtOBSERVABONO.Location = New System.Drawing.Point(19, 203)
         Me.txtOBSERVABONO.MaxLength = 100
         Me.txtOBSERVABONO.Name = "txtOBSERVABONO"
         Me.txtOBSERVABONO.Size = New System.Drawing.Size(672, 40)
@@ -881,18 +924,42 @@ Public Class frmPROCESOCRUD
         'tabDESCUENTO
         '
         Me.tabDESCUENTO.BackColor = System.Drawing.SystemColors.Control
+        Me.tabDESCUENTO.Controls.Add(Me.txtIDDESC)
+        Me.tabDESCUENTO.Controls.Add(Me.Label21)
         Me.tabDESCUENTO.Controls.Add(Me.Label15)
         Me.tabDESCUENTO.Controls.Add(Me.GroupBox4)
         Me.tabDESCUENTO.Location = New System.Drawing.Point(4, 25)
         Me.tabDESCUENTO.Name = "tabDESCUENTO"
-        Me.tabDESCUENTO.Size = New System.Drawing.Size(736, 291)
+        Me.tabDESCUENTO.Size = New System.Drawing.Size(736, 336)
         Me.tabDESCUENTO.TabIndex = 1
         Me.tabDESCUENTO.Text = "DESCUENTO"
         Me.tabDESCUENTO.Visible = False
         '
+        'txtIDDESC
+        '
+        Me.txtIDDESC.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIDDESC.Location = New System.Drawing.Point(152, 259)
+        Me.txtIDDESC.MaxLength = 12
+        Me.txtIDDESC.Name = "txtIDDESC"
+        Me.txtIDDESC.ReadOnly = True
+        Me.txtIDDESC.Size = New System.Drawing.Size(100, 22)
+        Me.txtIDDESC.TabIndex = 41
+        '
+        'Label21
+        '
+        Me.Label21.BackColor = System.Drawing.Color.Silver
+        Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label21.Location = New System.Drawing.Point(32, 259)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(104, 24)
+        Me.Label21.TabIndex = 40
+        Me.Label21.Text = "ID"
+        '
         'Label15
         '
-        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label15.BackColor = System.Drawing.SystemColors.Control
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label15.Location = New System.Drawing.Point(16, 19)
@@ -904,7 +971,7 @@ Public Class frmPROCESOCRUD
         '
         'GroupBox4
         '
-        Me.GroupBox4.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.GroupBox4.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox4.Controls.Add(Me.txtCUOTA)
         Me.GroupBox4.Controls.Add(Me.Label18)
         Me.GroupBox4.Controls.Add(Me.Label12)
@@ -954,7 +1021,7 @@ Public Class frmPROCESOCRUD
         Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(16, 96)
+        Me.Label12.Location = New System.Drawing.Point(16, 99)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(152, 24)
         Me.Label12.TabIndex = 15
@@ -1088,7 +1155,7 @@ Public Class frmPROCESOCRUD
         '
         'txtOBSERVADESC
         '
-        Me.txtOBSERVADESC.Location = New System.Drawing.Point(16, 120)
+        Me.txtOBSERVADESC.Location = New System.Drawing.Point(16, 123)
         Me.txtOBSERVADESC.MaxLength = 100
         Me.txtOBSERVADESC.Name = "txtOBSERVADESC"
         Me.txtOBSERVADESC.Size = New System.Drawing.Size(664, 56)
@@ -1097,12 +1164,14 @@ Public Class frmPROCESOCRUD
         '
         'tabDeudaPendiente
         '
+        Me.tabDeudaPendiente.Controls.Add(Me.Label23)
+        Me.tabDeudaPendiente.Controls.Add(Me.dtpTodasLasFechas)
         Me.tabDeudaPendiente.Controls.Add(Me.btnAsignarDeudas)
         Me.tabDeudaPendiente.Controls.Add(Me.dgvListaConceptos)
         Me.tabDeudaPendiente.Controls.Add(Me.dgvListaArbitros)
         Me.tabDeudaPendiente.Location = New System.Drawing.Point(4, 25)
         Me.tabDeudaPendiente.Name = "tabDeudaPendiente"
-        Me.tabDeudaPendiente.Size = New System.Drawing.Size(736, 291)
+        Me.tabDeudaPendiente.Size = New System.Drawing.Size(736, 336)
         Me.tabDeudaPendiente.TabIndex = 2
         Me.tabDeudaPendiente.Text = "DEUDA PENDIENTE"
         Me.tabDeudaPendiente.UseVisualStyleBackColor = True
@@ -1120,7 +1189,7 @@ Public Class frmPROCESOCRUD
         '
         Me.dgvListaConceptos.AutoGenerateColumns = False
         Me.dgvListaConceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListaConceptos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSeleccionadoDeuda, Me.concodigo, Me.connombre, Me.conmonto, Me.contipo})
+        Me.dgvListaConceptos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSeleccionadoDeuda, Me.concodigo, Me.connombre, Me.conmonto, Me.contipo, Me.confechavenc})
         Me.dgvListaConceptos.DataSource = Me.ConceptoBindingSource
         Me.dgvListaConceptos.Location = New System.Drawing.Point(356, 7)
         Me.dgvListaConceptos.Name = "dgvListaConceptos"
@@ -1159,6 +1228,11 @@ Public Class frmPROCESOCRUD
         Me.contipo.Name = "contipo"
         Me.contipo.Visible = False
         '
+        'confechavenc
+        '
+        Me.confechavenc.HeaderText = "Fecha vencimiento"
+        Me.confechavenc.Name = "confechavenc"
+        '
         'ConceptoBindingSource
         '
         Me.ConceptoBindingSource.DataMember = "concepto"
@@ -1183,6 +1257,34 @@ Public Class frmPROCESOCRUD
         Me.dgvListaArbitros.Name = "dgvListaArbitros"
         Me.dgvListaArbitros.Size = New System.Drawing.Size(344, 281)
         Me.dgvListaArbitros.TabIndex = 0
+        '
+        'colSeleccionadoArbitro
+        '
+        Me.colSeleccionadoArbitro.HeaderText = "Sel"
+        Me.colSeleccionadoArbitro.Name = "colSeleccionadoArbitro"
+        Me.colSeleccionadoArbitro.Width = 30
+        '
+        'arbcedula
+        '
+        Me.arbcedula.DataPropertyName = "arbcedula"
+        Me.arbcedula.HeaderText = "arbcedula"
+        Me.arbcedula.Name = "arbcedula"
+        '
+        'arbnombre
+        '
+        Me.arbnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader
+        Me.arbnombre.DataPropertyName = "arbnombre"
+        Me.arbnombre.FillWeight = 130.0!
+        Me.arbnombre.HeaderText = "arbnombre"
+        Me.arbnombre.Name = "arbnombre"
+        Me.arbnombre.Width = 5
+        '
+        'arbsituacion
+        '
+        Me.arbsituacion.DataPropertyName = "arbsituacion"
+        Me.arbsituacion.HeaderText = "arbsituacion"
+        Me.arbsituacion.Name = "arbsituacion"
+        Me.arbsituacion.Visible = False
         '
         'ContextMenuStrip1
         '
@@ -1217,15 +1319,35 @@ Public Class frmPROCESOCRUD
         '
         'tabDescontarPendiente
         '
+        Me.tabDescontarPendiente.Controls.Add(Me.dtpFECHAIMPUTAR)
+        Me.tabDescontarPendiente.Controls.Add(Me.Label22)
         Me.tabDescontarPendiente.Controls.Add(Me.btnDescontarPendientes)
         Me.tabDescontarPendiente.Controls.Add(Me.grdDeudaApagar)
         Me.tabDescontarPendiente.Location = New System.Drawing.Point(4, 25)
         Me.tabDescontarPendiente.Name = "tabDescontarPendiente"
         Me.tabDescontarPendiente.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabDescontarPendiente.Size = New System.Drawing.Size(736, 291)
+        Me.tabDescontarPendiente.Size = New System.Drawing.Size(736, 336)
         Me.tabDescontarPendiente.TabIndex = 3
         Me.tabDescontarPendiente.Text = "Descontar Pendiente"
         Me.tabDescontarPendiente.UseVisualStyleBackColor = True
+        '
+        'dtpFECHAIMPUTAR
+        '
+        Me.dtpFECHAIMPUTAR.Location = New System.Drawing.Point(135, 13)
+        Me.dtpFECHAIMPUTAR.Name = "dtpFECHAIMPUTAR"
+        Me.dtpFECHAIMPUTAR.Size = New System.Drawing.Size(200, 22)
+        Me.dtpFECHAIMPUTAR.TabIndex = 43
+        Me.ttFECHAIMPUTAR.SetToolTip(Me.dtpFECHAIMPUTAR, "Fecha a la que se asignarán los descuentos, por defecto será la fecha de hoy")
+        '
+        'Label22
+        '
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label22.Location = New System.Drawing.Point(6, 13)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(126, 16)
+        Me.Label22.TabIndex = 42
+        Me.Label22.Text = "Fecha a imputar: "
         '
         'btnDescontarPendientes
         '
@@ -1242,7 +1364,7 @@ Public Class frmPROCESOCRUD
         Me.grdDeudaApagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdDeudaApagar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombreDataGridViewTextBoxColumn, Me.ConceptoDataGridViewTextBoxColumn, Me.SaldoapagarDataGridViewTextBoxColumn, Me.fechaalta, Me.aimputar, Me.idfila, Me.idconcepto, Me.cedula})
         Me.grdDeudaApagar.DataSource = Me.DeudasApagarBindingSource1
-        Me.grdDeudaApagar.Location = New System.Drawing.Point(6, 6)
+        Me.grdDeudaApagar.Location = New System.Drawing.Point(6, 52)
         Me.grdDeudaApagar.Name = "grdDeudaApagar"
         Me.grdDeudaApagar.Size = New System.Drawing.Size(564, 237)
         Me.grdDeudaApagar.TabIndex = 41
@@ -1322,19 +1444,6 @@ Public Class frmPROCESOCRUD
         Me.DataSet11BindingSource1.DataSource = Me.DataSet11
         Me.DataSet11BindingSource1.Position = 0
         '
-        'Label17
-        '
-        Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(8, 8)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(920, 32)
-        Me.Label17.TabIndex = 42
-        Me.Label17.Text = "CARGA DE BONOS Y DESCUENTOS"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'ArbitroTableAdapter1
         '
         Me.ArbitroTableAdapter1.ClearBeforeFill = True
@@ -1362,48 +1471,36 @@ Public Class frmPROCESOCRUD
         '
         Me.DeudasApagarTableAdapter.ClearBeforeFill = True
         '
-        'colSeleccionadoArbitro
+        'dtpTodasLasFechas
         '
-        Me.colSeleccionadoArbitro.HeaderText = "Sel"
-        Me.colSeleccionadoArbitro.Name = "colSeleccionadoArbitro"
-        Me.colSeleccionadoArbitro.Width = 30
+        Me.dtpTodasLasFechas.Location = New System.Drawing.Point(356, 294)
+        Me.dtpTodasLasFechas.Name = "dtpTodasLasFechas"
+        Me.dtpTodasLasFechas.Size = New System.Drawing.Size(200, 22)
+        Me.dtpTodasLasFechas.TabIndex = 3
         '
-        'arbcedula
+        'Label23
         '
-        Me.arbcedula.DataPropertyName = "arbcedula"
-        Me.arbcedula.HeaderText = "arbcedula"
-        Me.arbcedula.Name = "arbcedula"
-        '
-        'arbnombre
-        '
-        Me.arbnombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader
-        Me.arbnombre.DataPropertyName = "arbnombre"
-        Me.arbnombre.FillWeight = 130.0!
-        Me.arbnombre.HeaderText = "arbnombre"
-        Me.arbnombre.Name = "arbnombre"
-        Me.arbnombre.Width = 5
-        '
-        'arbsituacion
-        '
-        Me.arbsituacion.DataPropertyName = "arbsituacion"
-        Me.arbsituacion.HeaderText = "arbsituacion"
-        Me.arbsituacion.Name = "arbsituacion"
-        Me.arbsituacion.Visible = False
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(32, 299)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(322, 16)
+        Me.Label23.TabIndex = 4
+        Me.Label23.Text = "Fecha de Vencimiento a asignar a todas las deudas:"
         '
         'frmPROCESOCRUD
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(936, 565)
-        Me.Controls.Add(Me.Label17)
+        Me.ClientSize = New System.Drawing.Size(1024, 565)
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox5)
-        Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmPROCESOCRUD"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds
         Me.Text = "DELTA - Módulo de Carga de Bonos y Descuentos"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         CType(Me.grdARBITRO, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1418,9 +1515,11 @@ Public Class frmPROCESOCRUD
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.tabDESCUENTO.ResumeLayout(False)
+        Me.tabDESCUENTO.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.tabDeudaPendiente.ResumeLayout(False)
+        Me.tabDeudaPendiente.PerformLayout()
         CType(Me.dgvListaConceptos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ConceptoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1438,6 +1537,7 @@ Public Class frmPROCESOCRUD
         CType(Me.DataSet12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet12BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -1457,6 +1557,7 @@ Public Class frmPROCESOCRUD
     End Sub
 
     Private Sub frmPROCESOCRUD_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         'TODO: This line of code loads data into the 'DataSet11.DeudasApagar' table. You can move, or remove it, as needed.
         'Me.DeudasApagarTableAdapter.Fill(Me.DataSet11.DeudasApagar)
         'TODO: This line of code loads data into the 'DataSet4.deuda_apagar' table. You can move, or remove it, as needed.
@@ -2213,8 +2314,14 @@ Public Class frmPROCESOCRUD
             wkconcepto = Val(Me.CONCEPTO.Text)
             wkmonto = Val(Replace(Me.txtMONTO.Text, ".", ""))
             wkfecha = Format(Me.datFECHA.Value, "yyyy-MM-dd")
-            wkequipo1 = Trim(Str(Val(Microsoft.VisualBasic.Left(Me.EQUIPO1.Text, 2))))
-            wkequipo2 = Trim(Str(Val(Microsoft.VisualBasic.Left(Me.EQUIPO2.Text, 2))))
+            'wkequipo1 = Trim(Str(Val(Microsoft.VisualBasic.Left(Me.EQUIPO1.Text, 2))))
+            'wkequipo2 = Trim(Str(Val(Microsoft.VisualBasic.Left(Me.EQUIPO2.Text, 2))))
+            Dim words As String() = Me.EQUIPO1.Text.Split(New Char() {" "c})
+            wkequipo1 = Val(words(0))
+            Dim words2 As String() = Me.EQUIPO2.Text.Split(New Char() {" "c})
+            wkequipo2 = Val(words2(0))
+
+
             wkestadio = Val(Str(Val(Microsoft.VisualBasic.Left(Me.ESTADIO.Text, 2))))
             If Val(Me.txtGRUPO.Text) > 0 Then
                 wkgrupo = Val(Me.txtGRUPO.Text)
@@ -2424,11 +2531,11 @@ Public Class frmPROCESOCRUD
 
         wkconcepto = Val(filadeuda.Cells.Item("idconcepto").Value)
         wkmonto = Val(filadeuda.Cells.Item("aimputar").Value)
-        wkfecha = Format(filadeuda.Cells.Item("fechaalta").Value, "yyyy-MM-dd")
+        wkfecha = Format(Me.dtpFECHAIMPUTAR.Value, "yyyy-MM-dd")
 
         wkarbcedula = Trim(filadeuda.Cells.Item("cedula").Value)
         wkdocumento = ""
-        wkdocfecha = Format(filadeuda.Cells.Item("fechaalta").Value, "yyyy-MM-dd")
+        wkdocfecha = Format(Me.dtpFECHAIMPUTAR.Value, "yyyy-MM-dd")
         wknumerodoc = 0
         wkcuota = 0
         wkobservadesc = ""
@@ -2647,6 +2754,10 @@ Public Class frmPROCESOCRUD
     End Sub
 
     Private Sub TabMOVIMIENTO_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabMOVIMIENTO.Click
+
+        confechavenc.DefaultCellStyle.NullValue = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
+
+
     End Sub
 
     Private Sub CONCEPTODESC_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CONCEPTODESC.KeyPress
@@ -2868,6 +2979,9 @@ Public Class frmPROCESOCRUD
 
         fila = grdMOVIMIENTO.CurrentRowIndex
         wkfecha = Format(grdMOVIMIENTO.Item(fila, 0), "yyyy-MM-dd")
+        'se carga fecha en el dtp de descuento
+        Me.dtpFECHAIMPUTAR.Value = wkfecha
+
         wkmonto = grdMOVIMIENTO.Item(fila, 2)
         wktipo = Trim(grdMOVIMIENTO.Item(fila, 3))
         wkconcepto = traeconcepto(grdMOVIMIENTO.Item(fila, 1), wktipo)
@@ -2895,16 +3009,16 @@ Public Class frmPROCESOCRUD
 
         If wkconcepto > 0 Then
             AbrirConexion()
-            cargarPantalla(wkarbcedula, wkfecha, wkmonto, wkconcepto, wktipo, wkdivision, wkequipo1, wkequipo2)
+            cargarPantalla(wkarbcedula, wkfecha, wkmonto, wkconcepto, wktipo, wkdivision, wkequipo1, wkequipo2, wkmovid)
             setEstiloMovimiento()
             CerrarConexion()
         End If
 
     End Sub
-    Sub cargarPantalla(ByVal wkarbcedula As Integer, ByVal wkfecha As String, ByVal wkmonto As Integer, ByVal wkconcepto As Integer, ByVal wktipo As String, ByVal wkdivision As Integer, ByVal wkequipo1 As Integer, ByVal wkequipo2 As Integer)
+    Sub cargarPantalla(ByVal wkarbcedula As Integer, ByVal wkfecha As String, ByVal wkmonto As Integer, ByVal wkconcepto As Integer, ByVal wktipo As String, ByVal wkdivision As Integer, ByVal wkequipo1 As Integer, ByVal wkequipo2 As Integer, ByVal wkid As Integer)
         Try
             If wktipo = "B" Then
-                strSQL = "SELECT movequipo1, movequipo2, movestadio, movgrupo, movtorneo, movfechapartida, movanho, movobservaciones from movmensual " & _
+                strSQL = "SELECT movequipo1, movequipo2, movestadio, movgrupo, movtorneo, movfechapartida, movanho, movobservaciones, movid from movmensual " & _
                          "where movcedula = " & wkarbcedula & " and " & _
                          "movfecha = '" & wkfecha & "' and " & _
                          "movmonto = " & wkmonto & " and " & _
@@ -2921,6 +3035,7 @@ Public Class frmPROCESOCRUD
                 While myReader.Read()
                     ' cargar los datos en pantalla desde el reader
                     With Me
+                        .txtID.Text= wkid
                         .datFECHA.Value = wkfecha
                         .txtMONTO.Text = FormatNumber(wkmonto, 0, TriState.UseDefault)
 
@@ -3023,6 +3138,7 @@ Public Class frmPROCESOCRUD
                 While myReader.Read()
                     ' cargar los datos en pantalla desde el reader
                     With Me
+                        .txtIDDESC.Text = wkid
                         .datFECHADESC.Value = wkfecha
                         .txtMONTODESC.Text = wkmonto
                         For indice = 0 To Me.CONCEPTODESC.Items.Count - 1
@@ -3147,10 +3263,11 @@ Public Class frmPROCESOCRUD
                             wkequipo2 = Trim(Str(Val(Me.EQUIPO2.Text)))
 
                             AbrirConexion()
-                            strSQL = "delete from movmensual  where movcedula = " & wkarbcedula & " and " & _
-                                     "movconcepto = " & wkconce & " and movmonto = " & wkmonto & " and " & _
-                                     "movfecha = '" & wkfecha & "' and movtipo = 'B'" & " and movequipo1 = '" & wkequipo1 & "' and " & _
-                                     "movequipo2 = '" & wkequipo2 & "';"
+                            'strSQL = "delete from movmensual  where movcedula = " & wkarbcedula & " and " & _
+                            '         "movconcepto = " & wkconce & " and movmonto = " & wkmonto & " and " & _
+                            '         "movfecha = '" & wkfecha & "' and movtipo = 'B'" & " and movequipo1 = '" & wkequipo1 & "' and " & _
+                            '         "movequipo2 = '" & wkequipo2 & "';"
+                            strSQL = "delete from movmensual  where movid = " & Me.txtID.Text & ";"
                             Dim myCommand As New Odbc.OdbcCommand(strSQL, ca_cn)
                             myCommand.ExecuteNonQuery()
                             myCommand.Dispose()
@@ -3184,9 +3301,10 @@ Public Class frmPROCESOCRUD
                             wkfecha = Format(Me.datFECHADESC.Value, "yyyy-MM-dd")
 
                             AbrirConexion()
-                            strSQL = "delete from movmensual  where movcedula = " & wkarbcedula & " and " & _
-                                     "movconcepto = " & wkconce & " and movmonto = " & wkmonto & " and " & _
-                                     "movfecha = '" & wkfecha & "' and movtipo = 'D'" & ""
+                            'strSQL = "delete from movmensual  where movcedula = " & wkarbcedula & " and " & _
+                            '         "movconcepto = " & wkconce & " and movmonto = " & wkmonto & " and " & _
+                            '         "movfecha = '" & wkfecha & "' and movtipo = 'D'" & ""
+                            strSQL = "delete from movmensual  where movid = " & Me.txtIDDESC.Text & ";"
                             Dim myCommand As New Odbc.OdbcCommand(strSQL, ca_cn)
                             myCommand.ExecuteNonQuery()
                             myCommand.Dispose()
@@ -3350,8 +3468,11 @@ Public Class frmPROCESOCRUD
             For Each filaArbitros As DataGridViewRow In dgvListaArbitros.Rows
 
                 If (filaConceptos.Cells.Item("colSeleccionadoDeuda").Value = True And filaArbitros.Cells.Item("colSeleccionadoArbitro").Value = True) Then
+
+                    Dim expenddt As Date = Date.ParseExact(filaConceptos.Cells.Item("confechavenc").Value, "dd/MM/yyyy",
+            System.Globalization.DateTimeFormatInfo.InvariantInfo)
                     strSQL = "INSERT INTO deuda_apagar(concepto, monto_original, persona, saldo, fecha_alta)" & _
-                              "VALUES (" & filaConceptos.Cells.Item("concodigo").Value & "," & filaConceptos.Cells.Item("conmonto").Value & "," & filaArbitros.Cells.Item("arbcedula").Value & "," & filaConceptos.Cells.Item("conmonto").Value & ",'" & Now.ToString("yyyy-MM-dd") & "')"
+                              "VALUES (" & filaConceptos.Cells.Item("concodigo").Value & "," & filaConceptos.Cells.Item("conmonto").Value & "," & filaArbitros.Cells.Item("arbcedula").Value & "," & filaConceptos.Cells.Item("conmonto").Value & ",'" & String.Format("{0:dd/MM/yyyy}", expenddt) & "')"
 
 
                     Dim myCommand As New Odbc.OdbcCommand(strSQL, ca_cn)
@@ -3393,6 +3514,42 @@ Public Class frmPROCESOCRUD
             End If
         Next
 
+
+    End Sub
+
+    Private Sub GroupBox5_Enter(sender As Object, e As EventArgs) Handles GroupBox5.Enter
+
+    End Sub
+
+    Private Sub GroupBox6_Enter(sender As Object, e As EventArgs) Handles GroupBox6.Enter
+
+    End Sub
+
+    Private Sub dtpFECHAIMPUTAR_MouseUp(sender As Object, e As MouseEventArgs) Handles dtpFECHAIMPUTAR.MouseUp
+
+    End Sub
+
+    Private Sub grdDeudaApagar_Click(sender As Object, e As EventArgs) Handles grdDeudaApagar.Click
+
+
+
+    End Sub
+
+    Private Sub dgvListaConceptos_Click(sender As Object, e As EventArgs) Handles dgvListaConceptos.Click
+
+    End Sub
+
+    Private Sub dgvListaConceptos_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles dgvListaConceptos.DefaultValuesNeeded
+        With e.Row
+            .Cells("confechavenc").Value = "WA"
+        End With
+    End Sub
+
+    Private Sub dtpTodasLasFechas_ValueChanged(sender As Object, e As EventArgs) Handles dtpTodasLasFechas.ValueChanged
+
+        For Each filaDeudas As DataGridViewRow In Me.dgvListaConceptos.Rows()
+            filaDeudas.Cells.Item("confechavenc").Value = String.Format("{0:dd/MM/yyyy}", dtpTodasLasFechas.Value)
+        Next
 
     End Sub
 End Class

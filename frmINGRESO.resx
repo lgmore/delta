@@ -112,17 +112,17 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAdoAAAHaCAYAAACn5IivAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOtQAA
-        DrUBY3GYyAAA/3lJREFUeF7sXQeMVdXW/l+eGjVCKKGGYWboVVHssRs1Go1GjBpL7M+CHct7ir0+K9an
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOtAAA
+        DrQBsTZ6LAAA/3lJREFUeF7sXQeMVdXW/l+eGjVCKKGGYWboVVHssRs1Go1GjBpL7M+CHct7ir0+K9an
         PtFnQ1GxUaYXYBpTmULvAQKBDIFAmDCBrP/71tr7nHOHGWaYGfo9vvtmmHvvuefus/f+VvnWt/5P4kd8
         BOIjEB+B+AjERyA+AvtkBP6Pxz45c/yk8RGIj0B8BOIjEB+B+AhIHGjjkyA+AvERiI9AfATiI7APRyAO
         tPtwcOOnjo9AfATiIxAfgfgIxIE2PgfiIxAfgfgIxEcgPgL7cATiQLsPBzd+6vgIxEcgPgLxEYiPQBxo
@@ -3504,7 +3504,7 @@
         P8bEAN2YTHBKAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
 </root>

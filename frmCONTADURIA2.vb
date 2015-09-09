@@ -343,10 +343,16 @@
         ca_cn2.Dispose()
 
         Dim reporte As New crpINFORMECONTADURIA2
+        reporte.SetParameterValue("fechainicio", Me.DateTimePicker1.Value.ToString("dd/MM/yyyy"))
+        reporte.SetParameterValue("fechafin", Me.DateTimePicker2.Value.ToString("dd/MM/yyyy"))
         Me.crpREPORTE.ReportSource = reporte
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

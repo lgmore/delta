@@ -172,14 +172,14 @@ Partial Class frmDEUDASPENDIENTES2
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(200, 80)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(170, 32)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 4
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(200, 32)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(170, 79)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker2.TabIndex = 3
@@ -187,9 +187,9 @@ Partial Class frmDEUDASPENDIENTES2
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(24, 80)
+        Me.Label2.Location = New System.Drawing.Point(51, 75)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 24)
+        Me.Label2.Size = New System.Drawing.Size(99, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Fecha final:"
         '
@@ -204,7 +204,7 @@ Partial Class frmDEUDASPENDIENTES2
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)

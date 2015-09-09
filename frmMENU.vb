@@ -87,6 +87,15 @@ Public Class frmMENU
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents mnuINFORMEPENDIENTES As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem6 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem7 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem8 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem9 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem10 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem11 As System.Windows.Forms.MenuItem
     Friend WithEvents mnuFACTURAS As System.Windows.Forms.MenuItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -97,6 +106,7 @@ Public Class frmMENU
         Me.mnuSOCIO = New System.Windows.Forms.MenuItem()
         Me.mnuUSUARIO = New System.Windows.Forms.MenuItem()
         Me.mnuCODIGOS = New System.Windows.Forms.MenuItem()
+        Me.MenuItem6 = New System.Windows.Forms.MenuItem()
         Me.mnuSALIR = New System.Windows.Forms.ContextMenu()
         Me.mnuSI = New System.Windows.Forms.MenuItem()
         Me.mnuNO = New System.Windows.Forms.MenuItem()
@@ -116,6 +126,7 @@ Public Class frmMENU
         Me.mnuPLANILLAAPF = New System.Windows.Forms.MenuItem()
         Me.mnuPLANILLACONTADURIA = New System.Windows.Forms.MenuItem()
         Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.tbbSEPARADOR2 = New System.Windows.Forms.ToolBarButton()
         Me.tbbREPORTE = New System.Windows.Forms.ToolBarButton()
         Me.mnuREPORTE = New System.Windows.Forms.ContextMenu()
@@ -124,6 +135,7 @@ Public Class frmMENU
         Me.mnuSOCIOPROMO = New System.Windows.Forms.MenuItem()
         Me.mnuBANCOS = New System.Windows.Forms.MenuItem()
         Me.mnuDISKETTES = New System.Windows.Forms.MenuItem()
+        Me.MenuItem4 = New System.Windows.Forms.MenuItem()
         Me.tbbSEPARADOR3 = New System.Windows.Forms.ToolBarButton()
         Me.tbbSALIR = New System.Windows.Forms.ToolBarButton()
         Me.MainMenu1 = New System.Windows.Forms.MainMenu(Me.components)
@@ -131,6 +143,7 @@ Public Class frmMENU
         Me.mnuSOCIOS = New System.Windows.Forms.MenuItem()
         Me.mnuUSUARIOS = New System.Windows.Forms.MenuItem()
         Me.mnuCÓDIGOS = New System.Windows.Forms.MenuItem()
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem()
         Me.mnuCARGAS = New System.Windows.Forms.MenuItem()
         Me.mnuBONOS_DESC = New System.Windows.Forms.MenuItem()
         Me.mnuAUTOFACTURAS = New System.Windows.Forms.MenuItem()
@@ -148,8 +161,13 @@ Public Class frmMENU
         Me.mnuSOCIOPROMOCION = New System.Windows.Forms.MenuItem()
         Me.mnuBANCO = New System.Windows.Forms.MenuItem()
         Me.mnuDISKETTE = New System.Windows.Forms.MenuItem()
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem()
         Me.mnuSALIRSIST = New System.Windows.Forms.MenuItem()
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem7 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem8 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem9 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem11 = New System.Windows.Forms.MenuItem()
         Me.SuspendLayout()
         '
         'ImageList1
@@ -185,7 +203,7 @@ Public Class frmMENU
         '
         'mnuHABILITAR
         '
-        Me.mnuHABILITAR.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuSOCIO, Me.mnuUSUARIO, Me.mnuCODIGOS})
+        Me.mnuHABILITAR.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuSOCIO, Me.mnuUSUARIO, Me.mnuCODIGOS, Me.MenuItem6})
         '
         'mnuSOCIO
         '
@@ -201,6 +219,11 @@ Public Class frmMENU
         '
         Me.mnuCODIGOS.Index = 2
         Me.mnuCODIGOS.Text = "CODIGOS"
+        '
+        'MenuItem6
+        '
+        Me.MenuItem6.Index = 3
+        Me.MenuItem6.Text = "EQUIPOS"
         '
         'mnuSALIR
         '
@@ -310,6 +333,11 @@ Public Class frmMENU
         Me.MenuItem1.Index = 3
         Me.MenuItem1.Text = "PLANILLA PARA CONTADURIA NUEVO"
         '
+        'MenuItem2
+        '
+        Me.MenuItem2.Index = 4
+        Me.MenuItem2.Text = "INFORME DE DEUDAS PENDIENTES"
+        '
         'tbbSEPARADOR2
         '
         Me.tbbSEPARADOR2.Name = "tbbSEPARADOR2"
@@ -325,7 +353,7 @@ Public Class frmMENU
         '
         'mnuREPORTE
         '
-        Me.mnuREPORTE.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBODINERO, Me.mnuFACURAREP, Me.mnuSOCIOPROMO, Me.mnuBANCOS, Me.mnuDISKETTES})
+        Me.mnuREPORTE.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem8, Me.mnuRECIBODINERO, Me.mnuFACURAREP, Me.mnuSOCIOPROMO, Me.mnuBANCOS, Me.mnuDISKETTES, Me.MenuItem4, Me.MenuItem9, Me.MenuItem10})
         '
         'mnuRECIBODINERO
         '
@@ -352,6 +380,11 @@ Public Class frmMENU
         Me.mnuDISKETTES.Index = 4
         Me.mnuDISKETTES.Text = "DISKETTE"
         '
+        'MenuItem4
+        '
+        Me.MenuItem4.Index = 5
+        Me.MenuItem4.Text = "IVA"
+        '
         'tbbSEPARADOR3
         '
         Me.tbbSEPARADOR3.Name = "tbbSEPARADOR3"
@@ -372,7 +405,7 @@ Public Class frmMENU
         'mnuHABILITACION
         '
         Me.mnuHABILITACION.Index = 0
-        Me.mnuHABILITACION.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuSOCIOS, Me.mnuUSUARIOS, Me.mnuCÓDIGOS})
+        Me.mnuHABILITACION.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuSOCIOS, Me.mnuUSUARIOS, Me.mnuCÓDIGOS, Me.MenuItem5})
         Me.mnuHABILITACION.Text = "HABILITACION"
         '
         'mnuSOCIOS
@@ -389,6 +422,11 @@ Public Class frmMENU
         '
         Me.mnuCÓDIGOS.Index = 2
         Me.mnuCÓDIGOS.Text = "CÓDIGOS"
+        '
+        'MenuItem5
+        '
+        Me.MenuItem5.Index = 3
+        Me.MenuItem5.Text = "EQUIPOS"
         '
         'mnuCARGAS
         '
@@ -450,7 +488,7 @@ Public Class frmMENU
         'mnuREPORTES
         '
         Me.mnuREPORTES.Index = 3
-        Me.mnuREPORTES.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBOREP, Me.mnuAUTOFACTURAREP, Me.mnuSOCIOPROMOCION, Me.mnuBANCO, Me.mnuDISKETTE})
+        Me.mnuREPORTES.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBOREP, Me.mnuAUTOFACTURAREP, Me.mnuSOCIOPROMOCION, Me.mnuBANCO, Me.mnuDISKETTE, Me.MenuItem3, Me.MenuItem7, Me.MenuItem11})
         Me.mnuREPORTES.Text = "REPORTE"
         '
         'mnuRECIBOREP
@@ -478,15 +516,40 @@ Public Class frmMENU
         Me.mnuDISKETTE.Index = 4
         Me.mnuDISKETTE.Text = "DISKETTE"
         '
+        'MenuItem3
+        '
+        Me.MenuItem3.Index = 5
+        Me.MenuItem3.Text = "IVA"
+        '
         'mnuSALIRSIST
         '
         Me.mnuSALIRSIST.Index = 4
         Me.mnuSALIRSIST.Text = "SALIR "
         '
-        'MenuItem2
+        'MenuItem7
         '
-        Me.MenuItem2.Index = 4
-        Me.MenuItem2.Text = "INFORME DE DEUDAS PENDIENTES"
+        Me.MenuItem7.Index = 6
+        Me.MenuItem7.Text = "SOCIOS AL DIA"
+        '
+        'MenuItem8
+        '
+        Me.MenuItem8.Index = 0
+        Me.MenuItem8.Text = ""
+        '
+        'MenuItem9
+        '
+        Me.MenuItem9.Index = 7
+        Me.MenuItem9.Text = "SOCIOS AL DIA"
+        '
+        'MenuItem10
+        '
+        Me.MenuItem10.Index = 8
+        Me.MenuItem10.Text = "SOCIOS MOROSOS"
+        '
+        'MenuItem11
+        '
+        Me.MenuItem11.Index = 7
+        Me.MenuItem11.Text = "SOCIOS MOROSOS"
         '
         'frmMENU
         '
@@ -725,6 +788,60 @@ Public Class frmMENU
 
     Private Sub MenuItem2_Click(sender As Object, e As EventArgs) Handles MenuItem2.Click
         Dim frmnew As New frmDEUDASPENDIENTES
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem3_Click(sender As Object, e As EventArgs) Handles MenuItem3.Click
+        Dim frmnew As New frmIVA
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem4_Click(sender As Object, e As EventArgs) Handles MenuItem4.Click
+        Dim frmnew As New frmIVA
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem5_Click(sender As Object, e As EventArgs) Handles MenuItem5.Click
+        Dim frmnew As New CRUDcodigos
+        frmnew.tabCODIGOS.SelectTab("tabpEQUIPO")
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem6_Click(sender As Object, e As EventArgs) Handles MenuItem6.Click
+        Dim frmnew As New CRUDcodigos
+        frmnew.tabCODIGOS.SelectTab("tabpEQUIPO")
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem7_Click(sender As Object, e As EventArgs) Handles MenuItem7.Click
+        Dim frmnew As New frmSOCIOSALDIA
+
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem9_Click(sender As Object, e As EventArgs) Handles MenuItem9.Click
+        Dim frmnew As New frmSOCIOSALDIA
+
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem10_Click(sender As Object, e As EventArgs) Handles MenuItem10.Click
+        Dim frmnew As New frmSOCIOSMOROSOS
+
+
+        frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem11_Click(sender As Object, e As EventArgs) Handles MenuItem11.Click
+        Dim frmnew As New frmSOCIOSMOROSOS
+
 
         frmnew.ShowDialog(Me)
     End Sub

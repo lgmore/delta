@@ -239,206 +239,206 @@ Public Class CRUDcodigos
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents chkdivision As System.Windows.Forms.CheckedListBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(CRUDcodigos))
-        Me.pctboxLOGOTIPOCPAF = New System.Windows.Forms.PictureBox
-        Me.lblTITULO = New System.Windows.Forms.Label
-        Me.tabCODIGOS = New System.Windows.Forms.TabControl
-        Me.tabpCIUDAD = New System.Windows.Forms.TabPage
-        Me.btnNUEVOCIUDAD = New System.Windows.Forms.Button
-        Me.txtBUSQUEDACIUDAD = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDACIUDAD = New System.Windows.Forms.Label
-        Me.btnCANCELARCIUDAD = New System.Windows.Forms.Button
-        Me.btnELIMINARCIUDAD = New System.Windows.Forms.Button
-        Me.btnMODIFICARCIUDAD = New System.Windows.Forms.Button
-        Me.btnAGREGARCIUDAD = New System.Windows.Forms.Button
-        Me.dtaCIUDAD = New System.Windows.Forms.DataGrid
-        Me.lblCODIGOSCIUDAD = New System.Windows.Forms.Label
-        Me.txtDESCRIPCIONCIUDAD = New System.Windows.Forms.TextBox
-        Me.intCODIGOCIUDAD = New System.Windows.Forms.TextBox
-        Me.lblNOMBRECIUDAD = New System.Windows.Forms.Label
-        Me.lblCODIGOCIUDAD = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.tabpEQUIPO = New System.Windows.Forms.TabPage
-        Me.chkdivision = New System.Windows.Forms.CheckedListBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.txtNOMBREBREVEEQUIPO = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btnNUEVOEQUIPO = New System.Windows.Forms.Button
-        Me.txtBUSQUEDAEQUIPO = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDAEQUIPO = New System.Windows.Forms.Label
-        Me.btnCANCELAREQUIPO = New System.Windows.Forms.Button
-        Me.btnELIMINAREQUIPO = New System.Windows.Forms.Button
-        Me.btnMODIFICAREQUIPO = New System.Windows.Forms.Button
-        Me.btnAGREGAREQUIPO = New System.Windows.Forms.Button
-        Me.dtaEQUIPO = New System.Windows.Forms.DataGrid
-        Me.lblTITULOEQUIPOS = New System.Windows.Forms.Label
-        Me.txtNOMBREEQUIPOS = New System.Windows.Forms.TextBox
-        Me.intCODIGOEQUIPOS = New System.Windows.Forms.TextBox
-        Me.lblNOMBREEQUIPOS = New System.Windows.Forms.Label
-        Me.lblCODIGOEQUIPOS = New System.Windows.Forms.Label
-        Me.tabpPROFESION = New System.Windows.Forms.TabPage
-        Me.btnNUEVOPROFESION = New System.Windows.Forms.Button
-        Me.txtBUSQUEDAPROFESION = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDAPROFESION = New System.Windows.Forms.Label
-        Me.btnCANCELARPROFESION = New System.Windows.Forms.Button
-        Me.btnELIMINARPROFESION = New System.Windows.Forms.Button
-        Me.btnMODIFICARPROFESION = New System.Windows.Forms.Button
-        Me.btnAGREGARPROFESION = New System.Windows.Forms.Button
-        Me.dtaPROFESION = New System.Windows.Forms.DataGrid
-        Me.lblTITULOPROFESION = New System.Windows.Forms.Label
-        Me.txtNOMBREPROFESION = New System.Windows.Forms.TextBox
-        Me.intCODIGOPROFESION = New System.Windows.Forms.TextBox
-        Me.lblNOMBREPROFESION = New System.Windows.Forms.Label
-        Me.lblCODIGOPROFESION = New System.Windows.Forms.Label
-        Me.tabpIDIOMA = New System.Windows.Forms.TabPage
-        Me.lblNUEVOIDIOMA = New System.Windows.Forms.Button
-        Me.txtBUSQUEDAIDIOMA = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDAIDIOMA = New System.Windows.Forms.Label
-        Me.btnCANCELARIDIOMA = New System.Windows.Forms.Button
-        Me.btnELIMINARIDIOMA = New System.Windows.Forms.Button
-        Me.btnMODIFICARIDIOMA = New System.Windows.Forms.Button
-        Me.btnAGREGARIDIOMA = New System.Windows.Forms.Button
-        Me.dtaIDIOMA = New System.Windows.Forms.DataGrid
-        Me.txtNOMBREIDIOMA = New System.Windows.Forms.TextBox
-        Me.intCODIGOIDIOMA = New System.Windows.Forms.TextBox
-        Me.lblNOMBREIDIOMA = New System.Windows.Forms.Label
-        Me.lblCODIGOIDIOMA = New System.Windows.Forms.Label
-        Me.lblCODIGOSIDIOMA = New System.Windows.Forms.Label
-        Me.tabpDIVISION = New System.Windows.Forms.TabPage
-        Me.btnNUEVODIVISIONES = New System.Windows.Forms.Button
-        Me.txtBUSQUEDADIVISIONES = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDADIVISIONES = New System.Windows.Forms.Label
-        Me.btnCANCELARDIVISIONES = New System.Windows.Forms.Button
-        Me.btnELIMINARDIVISIONES = New System.Windows.Forms.Button
-        Me.btnMODIFICARDIVISIONES = New System.Windows.Forms.Button
-        Me.btnAGREGARDIVISIONES = New System.Windows.Forms.Button
-        Me.dtaDIVISIONES = New System.Windows.Forms.DataGrid
-        Me.lblTITULODIVISIONES = New System.Windows.Forms.Label
-        Me.txtNOMBREDIVISIONES = New System.Windows.Forms.TextBox
-        Me.intCODIGODIVISIONES = New System.Windows.Forms.TextBox
-        Me.lblNOMBRE = New System.Windows.Forms.Label
-        Me.lblCODIGO = New System.Windows.Forms.Label
-        Me.tabpparentesco = New System.Windows.Forms.TabPage
-        Me.btnNUEVOPARENTESCO = New System.Windows.Forms.Button
-        Me.txtBUSQUEDAPARENTESCO = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDAPARENTESCO = New System.Windows.Forms.Label
-        Me.btnCANCELARPARENTESCO = New System.Windows.Forms.Button
-        Me.btnELIMINARPARENTESCO = New System.Windows.Forms.Button
-        Me.btnMODIFICARPARENTESCO = New System.Windows.Forms.Button
-        Me.btnAGREGARPARENTESCO = New System.Windows.Forms.Button
-        Me.dtaPARENTESCO = New System.Windows.Forms.DataGrid
-        Me.lblTITULOPARENTESCO = New System.Windows.Forms.Label
-        Me.txtNOMBREPARENTESCO = New System.Windows.Forms.TextBox
-        Me.intCODIGOPARENTESCO = New System.Windows.Forms.TextBox
-        Me.lblNOMBREPARENTESCO = New System.Windows.Forms.Label
-        Me.lblCODIGOPARENTESCO = New System.Windows.Forms.Label
-        Me.tabpESTADIO = New System.Windows.Forms.TabPage
-        Me.txtNOMBREBREVEESTADIO = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.btnNUEVOESTADIO = New System.Windows.Forms.Button
-        Me.txtBUSQUEDAESTADIO = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDAESTADIO = New System.Windows.Forms.Label
-        Me.btnCANCELARESTADIO = New System.Windows.Forms.Button
-        Me.btnELIMINARESTADIO = New System.Windows.Forms.Button
-        Me.btnMODIFICARESTADIO = New System.Windows.Forms.Button
-        Me.btnAGREGARESTADIO = New System.Windows.Forms.Button
-        Me.dtaESTADIO = New System.Windows.Forms.DataGrid
-        Me.lblTITULOESTADIO = New System.Windows.Forms.Label
-        Me.txtNOMBREESTADIO = New System.Windows.Forms.TextBox
-        Me.intCODIGOESTADIO = New System.Windows.Forms.TextBox
-        Me.lblNOMBREESTADIO = New System.Windows.Forms.Label
-        Me.lblCODIGOESTADIO = New System.Windows.Forms.Label
-        Me.tabpPAIS = New System.Windows.Forms.TabPage
-        Me.btnNUEVOPAIS = New System.Windows.Forms.Button
-        Me.txtBUSQUEDAPAIS = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDAPAIS = New System.Windows.Forms.Label
-        Me.btnCANCELARPAIS = New System.Windows.Forms.Button
-        Me.btnELIMINARPAIS = New System.Windows.Forms.Button
-        Me.btnMODIFICARPAIS = New System.Windows.Forms.Button
-        Me.btnAGREGARPAIS = New System.Windows.Forms.Button
-        Me.dtaPAIS = New System.Windows.Forms.DataGrid
-        Me.lblTITULOPAIS = New System.Windows.Forms.Label
-        Me.txtNOMBREPAIS = New System.Windows.Forms.TextBox
-        Me.intCODIGOPAIS = New System.Windows.Forms.TextBox
-        Me.lblNOMBREPAIS = New System.Windows.Forms.Label
-        Me.lblCODIGOPAIS = New System.Windows.Forms.Label
-        Me.tabpTIPODOCUMENTO = New System.Windows.Forms.TabPage
-        Me.btnNUEVOTIPODOCUMENTO = New System.Windows.Forms.Button
-        Me.txtBUSQUEDATIPODOCUMENTO = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDATIPODOCUMENTO = New System.Windows.Forms.Label
-        Me.btnCANCELARTIPODOCUMENTO = New System.Windows.Forms.Button
-        Me.btnELIMINARTIPODOCUMENTO = New System.Windows.Forms.Button
-        Me.btnMODIFICARTIPODOCUMENTO = New System.Windows.Forms.Button
-        Me.btnAGREGARTIPODOCUMENTO = New System.Windows.Forms.Button
-        Me.dtaTIPODOCUMENTO = New System.Windows.Forms.DataGrid
-        Me.lblTITULOTIPODOCUMENTO = New System.Windows.Forms.Label
-        Me.txtNOMBRETIPODOCUMENTO = New System.Windows.Forms.TextBox
-        Me.intCODIGOTIPODOCUMENTO = New System.Windows.Forms.TextBox
-        Me.lblNOMBRETIPODOCUMENTO = New System.Windows.Forms.Label
-        Me.lblCODIGOTIPODOCUMENTO = New System.Windows.Forms.Label
-        Me.tabpCONCEPTO = New System.Windows.Forms.TabPage
-        Me.intMONTOCONCEPTO = New System.Windows.Forms.TextBox
-        Me.lblMONTOCONCEPTO = New System.Windows.Forms.Label
-        Me.cboBONODESCUENTOCONCEPTO = New System.Windows.Forms.ComboBox
-        Me.lblTIPO = New System.Windows.Forms.Label
-        Me.txtNOMBREBREVECONCEPTO = New System.Windows.Forms.TextBox
-        Me.lblNOMBREBREVECONCEPTO = New System.Windows.Forms.Label
-        Me.btnNUEVOCONCEPTO = New System.Windows.Forms.Button
-        Me.txtBUSQUEDACONCEPTO = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDACONCEPTO = New System.Windows.Forms.Label
-        Me.btnCANCELARCONCEPTO = New System.Windows.Forms.Button
-        Me.btnELIMINARCONCEPTO = New System.Windows.Forms.Button
-        Me.btnMODIFICARCONCEPTO = New System.Windows.Forms.Button
-        Me.btnAGREGARCONCEPTO = New System.Windows.Forms.Button
-        Me.dtaCONCEPTO = New System.Windows.Forms.DataGrid
-        Me.lblTITULOCONCEPTO = New System.Windows.Forms.Label
-        Me.txtNOMBRECONCEPTO = New System.Windows.Forms.TextBox
-        Me.intCODIGOCONCEPTO = New System.Windows.Forms.TextBox
-        Me.lblNOMBRECONCEPTO = New System.Windows.Forms.Label
-        Me.lblCODIGOCONCEPTO = New System.Windows.Forms.Label
-        Me.tabpcategoria = New System.Windows.Forms.TabPage
-        Me.txtNIVELCATEGORIA = New System.Windows.Forms.TextBox
-        Me.lblNIVEL = New System.Windows.Forms.Label
-        Me.btnNUEVOCATEGORIA = New System.Windows.Forms.Button
-        Me.txtBUSQUEDACATEGORIA = New System.Windows.Forms.TextBox
-        Me.lblBUSQUEDACATEGORIA = New System.Windows.Forms.Label
-        Me.btnCANCELARCATEGORIA = New System.Windows.Forms.Button
-        Me.btnELIMINARCATEGORIA = New System.Windows.Forms.Button
-        Me.btnMODIFICARCATEGORIA = New System.Windows.Forms.Button
-        Me.btnAGREGARCATEGORIA = New System.Windows.Forms.Button
-        Me.dtaCATEGORIA = New System.Windows.Forms.DataGrid
-        Me.lblTITULOCATEGORIA = New System.Windows.Forms.Label
-        Me.txtNOMBRECATEGORIA = New System.Windows.Forms.TextBox
-        Me.txtCODIGOCATEGORIA = New System.Windows.Forms.TextBox
-        Me.lblNOMBRECATEGORIA = New System.Windows.Forms.Label
-        Me.lblCODIGOCATEGORIA = New System.Windows.Forms.Label
-        Me.tabpmantcapital = New System.Windows.Forms.TabPage
-        Me.intMONTOASIGNADOMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox
-        Me.lblMONTOASIGNADOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label
-        Me.intMONTOFINALMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox
-        Me.lblMONTOFINALMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label
-        Me.btnNUEVOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button
-        Me.btnCANCELARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button
-        Me.btnELIMINARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button
-        Me.btnMODIFICARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button
-        Me.btnAGREGARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button
-        Me.dtaMANTENIMIENTOCAPITAL = New System.Windows.Forms.DataGrid
-        Me.lblTITULOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label
-        Me.intMONTOINICIALMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox
-        Me.intCODIGOMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox
-        Me.lblMONTOINICIALMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label
-        Me.lblCODIGOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label
-        Me.btnVOLVER = New System.Windows.Forms.Button
-        Me.lblFECHAHORA = New System.Windows.Forms.Label
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CRUDcodigos))
+        Me.pctboxLOGOTIPOCPAF = New System.Windows.Forms.PictureBox()
+        Me.lblTITULO = New System.Windows.Forms.Label()
+        Me.tabCODIGOS = New System.Windows.Forms.TabControl()
+        Me.tabpCIUDAD = New System.Windows.Forms.TabPage()
+        Me.btnNUEVOCIUDAD = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDACIUDAD = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDACIUDAD = New System.Windows.Forms.Label()
+        Me.btnCANCELARCIUDAD = New System.Windows.Forms.Button()
+        Me.btnELIMINARCIUDAD = New System.Windows.Forms.Button()
+        Me.btnMODIFICARCIUDAD = New System.Windows.Forms.Button()
+        Me.btnAGREGARCIUDAD = New System.Windows.Forms.Button()
+        Me.dtaCIUDAD = New System.Windows.Forms.DataGrid()
+        Me.lblCODIGOSCIUDAD = New System.Windows.Forms.Label()
+        Me.txtDESCRIPCIONCIUDAD = New System.Windows.Forms.TextBox()
+        Me.intCODIGOCIUDAD = New System.Windows.Forms.TextBox()
+        Me.lblNOMBRECIUDAD = New System.Windows.Forms.Label()
+        Me.lblCODIGOCIUDAD = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.tabpEQUIPO = New System.Windows.Forms.TabPage()
+        Me.chkdivision = New System.Windows.Forms.CheckedListBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtNOMBREBREVEEQUIPO = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnNUEVOEQUIPO = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDAEQUIPO = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDAEQUIPO = New System.Windows.Forms.Label()
+        Me.btnCANCELAREQUIPO = New System.Windows.Forms.Button()
+        Me.btnELIMINAREQUIPO = New System.Windows.Forms.Button()
+        Me.btnMODIFICAREQUIPO = New System.Windows.Forms.Button()
+        Me.btnAGREGAREQUIPO = New System.Windows.Forms.Button()
+        Me.dtaEQUIPO = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOEQUIPOS = New System.Windows.Forms.Label()
+        Me.txtNOMBREEQUIPOS = New System.Windows.Forms.TextBox()
+        Me.intCODIGOEQUIPOS = New System.Windows.Forms.TextBox()
+        Me.lblNOMBREEQUIPOS = New System.Windows.Forms.Label()
+        Me.lblCODIGOEQUIPOS = New System.Windows.Forms.Label()
+        Me.tabpPROFESION = New System.Windows.Forms.TabPage()
+        Me.btnNUEVOPROFESION = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDAPROFESION = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDAPROFESION = New System.Windows.Forms.Label()
+        Me.btnCANCELARPROFESION = New System.Windows.Forms.Button()
+        Me.btnELIMINARPROFESION = New System.Windows.Forms.Button()
+        Me.btnMODIFICARPROFESION = New System.Windows.Forms.Button()
+        Me.btnAGREGARPROFESION = New System.Windows.Forms.Button()
+        Me.dtaPROFESION = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOPROFESION = New System.Windows.Forms.Label()
+        Me.txtNOMBREPROFESION = New System.Windows.Forms.TextBox()
+        Me.intCODIGOPROFESION = New System.Windows.Forms.TextBox()
+        Me.lblNOMBREPROFESION = New System.Windows.Forms.Label()
+        Me.lblCODIGOPROFESION = New System.Windows.Forms.Label()
+        Me.tabpIDIOMA = New System.Windows.Forms.TabPage()
+        Me.lblNUEVOIDIOMA = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDAIDIOMA = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDAIDIOMA = New System.Windows.Forms.Label()
+        Me.btnCANCELARIDIOMA = New System.Windows.Forms.Button()
+        Me.btnELIMINARIDIOMA = New System.Windows.Forms.Button()
+        Me.btnMODIFICARIDIOMA = New System.Windows.Forms.Button()
+        Me.btnAGREGARIDIOMA = New System.Windows.Forms.Button()
+        Me.dtaIDIOMA = New System.Windows.Forms.DataGrid()
+        Me.txtNOMBREIDIOMA = New System.Windows.Forms.TextBox()
+        Me.intCODIGOIDIOMA = New System.Windows.Forms.TextBox()
+        Me.lblNOMBREIDIOMA = New System.Windows.Forms.Label()
+        Me.lblCODIGOIDIOMA = New System.Windows.Forms.Label()
+        Me.lblCODIGOSIDIOMA = New System.Windows.Forms.Label()
+        Me.tabpDIVISION = New System.Windows.Forms.TabPage()
+        Me.btnNUEVODIVISIONES = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDADIVISIONES = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDADIVISIONES = New System.Windows.Forms.Label()
+        Me.btnCANCELARDIVISIONES = New System.Windows.Forms.Button()
+        Me.btnELIMINARDIVISIONES = New System.Windows.Forms.Button()
+        Me.btnMODIFICARDIVISIONES = New System.Windows.Forms.Button()
+        Me.btnAGREGARDIVISIONES = New System.Windows.Forms.Button()
+        Me.dtaDIVISIONES = New System.Windows.Forms.DataGrid()
+        Me.lblTITULODIVISIONES = New System.Windows.Forms.Label()
+        Me.txtNOMBREDIVISIONES = New System.Windows.Forms.TextBox()
+        Me.intCODIGODIVISIONES = New System.Windows.Forms.TextBox()
+        Me.lblNOMBRE = New System.Windows.Forms.Label()
+        Me.lblCODIGO = New System.Windows.Forms.Label()
+        Me.tabpparentesco = New System.Windows.Forms.TabPage()
+        Me.btnNUEVOPARENTESCO = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDAPARENTESCO = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDAPARENTESCO = New System.Windows.Forms.Label()
+        Me.btnCANCELARPARENTESCO = New System.Windows.Forms.Button()
+        Me.btnELIMINARPARENTESCO = New System.Windows.Forms.Button()
+        Me.btnMODIFICARPARENTESCO = New System.Windows.Forms.Button()
+        Me.btnAGREGARPARENTESCO = New System.Windows.Forms.Button()
+        Me.dtaPARENTESCO = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOPARENTESCO = New System.Windows.Forms.Label()
+        Me.txtNOMBREPARENTESCO = New System.Windows.Forms.TextBox()
+        Me.intCODIGOPARENTESCO = New System.Windows.Forms.TextBox()
+        Me.lblNOMBREPARENTESCO = New System.Windows.Forms.Label()
+        Me.lblCODIGOPARENTESCO = New System.Windows.Forms.Label()
+        Me.tabpESTADIO = New System.Windows.Forms.TabPage()
+        Me.txtNOMBREBREVEESTADIO = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnNUEVOESTADIO = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDAESTADIO = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDAESTADIO = New System.Windows.Forms.Label()
+        Me.btnCANCELARESTADIO = New System.Windows.Forms.Button()
+        Me.btnELIMINARESTADIO = New System.Windows.Forms.Button()
+        Me.btnMODIFICARESTADIO = New System.Windows.Forms.Button()
+        Me.btnAGREGARESTADIO = New System.Windows.Forms.Button()
+        Me.dtaESTADIO = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOESTADIO = New System.Windows.Forms.Label()
+        Me.txtNOMBREESTADIO = New System.Windows.Forms.TextBox()
+        Me.intCODIGOESTADIO = New System.Windows.Forms.TextBox()
+        Me.lblNOMBREESTADIO = New System.Windows.Forms.Label()
+        Me.lblCODIGOESTADIO = New System.Windows.Forms.Label()
+        Me.tabpPAIS = New System.Windows.Forms.TabPage()
+        Me.btnNUEVOPAIS = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDAPAIS = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDAPAIS = New System.Windows.Forms.Label()
+        Me.btnCANCELARPAIS = New System.Windows.Forms.Button()
+        Me.btnELIMINARPAIS = New System.Windows.Forms.Button()
+        Me.btnMODIFICARPAIS = New System.Windows.Forms.Button()
+        Me.btnAGREGARPAIS = New System.Windows.Forms.Button()
+        Me.dtaPAIS = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOPAIS = New System.Windows.Forms.Label()
+        Me.txtNOMBREPAIS = New System.Windows.Forms.TextBox()
+        Me.intCODIGOPAIS = New System.Windows.Forms.TextBox()
+        Me.lblNOMBREPAIS = New System.Windows.Forms.Label()
+        Me.lblCODIGOPAIS = New System.Windows.Forms.Label()
+        Me.tabpTIPODOCUMENTO = New System.Windows.Forms.TabPage()
+        Me.btnNUEVOTIPODOCUMENTO = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDATIPODOCUMENTO = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDATIPODOCUMENTO = New System.Windows.Forms.Label()
+        Me.btnCANCELARTIPODOCUMENTO = New System.Windows.Forms.Button()
+        Me.btnELIMINARTIPODOCUMENTO = New System.Windows.Forms.Button()
+        Me.btnMODIFICARTIPODOCUMENTO = New System.Windows.Forms.Button()
+        Me.btnAGREGARTIPODOCUMENTO = New System.Windows.Forms.Button()
+        Me.dtaTIPODOCUMENTO = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOTIPODOCUMENTO = New System.Windows.Forms.Label()
+        Me.txtNOMBRETIPODOCUMENTO = New System.Windows.Forms.TextBox()
+        Me.intCODIGOTIPODOCUMENTO = New System.Windows.Forms.TextBox()
+        Me.lblNOMBRETIPODOCUMENTO = New System.Windows.Forms.Label()
+        Me.lblCODIGOTIPODOCUMENTO = New System.Windows.Forms.Label()
+        Me.tabpCONCEPTO = New System.Windows.Forms.TabPage()
+        Me.intMONTOCONCEPTO = New System.Windows.Forms.TextBox()
+        Me.lblMONTOCONCEPTO = New System.Windows.Forms.Label()
+        Me.cboBONODESCUENTOCONCEPTO = New System.Windows.Forms.ComboBox()
+        Me.lblTIPO = New System.Windows.Forms.Label()
+        Me.txtNOMBREBREVECONCEPTO = New System.Windows.Forms.TextBox()
+        Me.lblNOMBREBREVECONCEPTO = New System.Windows.Forms.Label()
+        Me.btnNUEVOCONCEPTO = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDACONCEPTO = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDACONCEPTO = New System.Windows.Forms.Label()
+        Me.btnCANCELARCONCEPTO = New System.Windows.Forms.Button()
+        Me.btnELIMINARCONCEPTO = New System.Windows.Forms.Button()
+        Me.btnMODIFICARCONCEPTO = New System.Windows.Forms.Button()
+        Me.btnAGREGARCONCEPTO = New System.Windows.Forms.Button()
+        Me.dtaCONCEPTO = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOCONCEPTO = New System.Windows.Forms.Label()
+        Me.txtNOMBRECONCEPTO = New System.Windows.Forms.TextBox()
+        Me.intCODIGOCONCEPTO = New System.Windows.Forms.TextBox()
+        Me.lblNOMBRECONCEPTO = New System.Windows.Forms.Label()
+        Me.lblCODIGOCONCEPTO = New System.Windows.Forms.Label()
+        Me.tabpcategoria = New System.Windows.Forms.TabPage()
+        Me.txtNIVELCATEGORIA = New System.Windows.Forms.TextBox()
+        Me.lblNIVEL = New System.Windows.Forms.Label()
+        Me.btnNUEVOCATEGORIA = New System.Windows.Forms.Button()
+        Me.txtBUSQUEDACATEGORIA = New System.Windows.Forms.TextBox()
+        Me.lblBUSQUEDACATEGORIA = New System.Windows.Forms.Label()
+        Me.btnCANCELARCATEGORIA = New System.Windows.Forms.Button()
+        Me.btnELIMINARCATEGORIA = New System.Windows.Forms.Button()
+        Me.btnMODIFICARCATEGORIA = New System.Windows.Forms.Button()
+        Me.btnAGREGARCATEGORIA = New System.Windows.Forms.Button()
+        Me.dtaCATEGORIA = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOCATEGORIA = New System.Windows.Forms.Label()
+        Me.txtNOMBRECATEGORIA = New System.Windows.Forms.TextBox()
+        Me.txtCODIGOCATEGORIA = New System.Windows.Forms.TextBox()
+        Me.lblNOMBRECATEGORIA = New System.Windows.Forms.Label()
+        Me.lblCODIGOCATEGORIA = New System.Windows.Forms.Label()
+        Me.tabpmantcapital = New System.Windows.Forms.TabPage()
+        Me.intMONTOASIGNADOMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox()
+        Me.lblMONTOASIGNADOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label()
+        Me.intMONTOFINALMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox()
+        Me.lblMONTOFINALMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label()
+        Me.btnNUEVOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button()
+        Me.btnCANCELARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button()
+        Me.btnELIMINARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button()
+        Me.btnMODIFICARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button()
+        Me.btnAGREGARMANTENIMIENTOCAPITAL = New System.Windows.Forms.Button()
+        Me.dtaMANTENIMIENTOCAPITAL = New System.Windows.Forms.DataGrid()
+        Me.lblTITULOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label()
+        Me.intMONTOINICIALMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox()
+        Me.intCODIGOMANTENIMIENTOCAPITAL = New System.Windows.Forms.TextBox()
+        Me.lblMONTOINICIALMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label()
+        Me.lblCODIGOMANTENIMIENTOCAPITAL = New System.Windows.Forms.Label()
+        Me.btnVOLVER = New System.Windows.Forms.Button()
+        Me.lblFECHAHORA = New System.Windows.Forms.Label()
         Me.timerCIUDAD = New System.Windows.Forms.Timer(Me.components)
-        Me.lblUSUARIOACTUAL = New System.Windows.Forms.Label
-        Me.lblUSUARIO = New System.Windows.Forms.Label
+        Me.lblUSUARIOACTUAL = New System.Windows.Forms.Label()
+        Me.lblUSUARIO = New System.Windows.Forms.Label()
         Me.timerIDIOMA = New System.Windows.Forms.Timer(Me.components)
         Me.timerCATEGORIA = New System.Windows.Forms.Timer(Me.components)
         Me.timerTIPODOCUMENTO = New System.Windows.Forms.Timer(Me.components)
@@ -450,6 +450,7 @@ Public Class CRUDcodigos
         Me.timerPROFESION = New System.Windows.Forms.Timer(Me.components)
         Me.timerMANTENIMIENTOCAPITAL = New System.Windows.Forms.Timer(Me.components)
         Me.timerDIVISIONES = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.pctboxLOGOTIPOCPAF, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabCODIGOS.SuspendLayout()
         Me.tabpCIUDAD.SuspendLayout()
         CType(Me.dtaCIUDAD, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -511,15 +512,16 @@ Public Class CRUDcodigos
         Me.tabCODIGOS.Controls.Add(Me.tabpCONCEPTO)
         Me.tabCODIGOS.Controls.Add(Me.tabpcategoria)
         Me.tabCODIGOS.Controls.Add(Me.tabpmantcapital)
-        Me.tabCODIGOS.Location = New System.Drawing.Point(32, 184)
+        Me.tabCODIGOS.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.tabCODIGOS.Location = New System.Drawing.Point(0, 184)
         Me.tabCODIGOS.Name = "tabCODIGOS"
         Me.tabCODIGOS.SelectedIndex = 0
-        Me.tabCODIGOS.Size = New System.Drawing.Size(960, 520)
+        Me.tabCODIGOS.Size = New System.Drawing.Size(992, 520)
         Me.tabCODIGOS.TabIndex = 0
         '
         'tabpCIUDAD
         '
-        Me.tabpCIUDAD.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.tabpCIUDAD.BackColor = System.Drawing.SystemColors.Control
         Me.tabpCIUDAD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.tabpCIUDAD.Controls.Add(Me.btnNUEVOCIUDAD)
         Me.tabpCIUDAD.Controls.Add(Me.txtBUSQUEDACIUDAD)
@@ -556,6 +558,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOCIUDAD.Size = New System.Drawing.Size(104, 56)
         Me.btnNUEVOCIUDAD.TabIndex = 11
         Me.btnNUEVOCIUDAD.Text = "&Nuevo Registro"
+        Me.btnNUEVOCIUDAD.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDACIUDAD
         '
@@ -565,7 +568,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDACIUDAD.Name = "txtBUSQUEDACIUDAD"
         Me.txtBUSQUEDACIUDAD.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDACIUDAD.TabIndex = 6
-        Me.txtBUSQUEDACIUDAD.Text = ""
         '
         'lblBUSQUEDACIUDAD
         '
@@ -639,7 +641,6 @@ Public Class CRUDcodigos
         Me.txtDESCRIPCIONCIUDAD.Name = "txtDESCRIPCIONCIUDAD"
         Me.txtDESCRIPCIONCIUDAD.Size = New System.Drawing.Size(392, 26)
         Me.txtDESCRIPCIONCIUDAD.TabIndex = 1
-        Me.txtDESCRIPCIONCIUDAD.Text = ""
         '
         'intCODIGOCIUDAD
         '
@@ -650,7 +651,6 @@ Public Class CRUDcodigos
         Me.intCODIGOCIUDAD.Name = "intCODIGOCIUDAD"
         Me.intCODIGOCIUDAD.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOCIUDAD.TabIndex = 0
-        Me.intCODIGOCIUDAD.Text = ""
         '
         'lblNOMBRECIUDAD
         '
@@ -730,7 +730,7 @@ Public Class CRUDcodigos
         '
         'tabpEQUIPO
         '
-        Me.tabpEQUIPO.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.tabpEQUIPO.BackColor = System.Drawing.SystemColors.Control
         Me.tabpEQUIPO.Controls.Add(Me.chkdivision)
         Me.tabpEQUIPO.Controls.Add(Me.Label3)
         Me.tabpEQUIPO.Controls.Add(Me.txtNOMBREBREVEEQUIPO)
@@ -750,7 +750,7 @@ Public Class CRUDcodigos
         Me.tabpEQUIPO.Controls.Add(Me.lblCODIGOEQUIPOS)
         Me.tabpEQUIPO.Location = New System.Drawing.Point(4, 22)
         Me.tabpEQUIPO.Name = "tabpEQUIPO"
-        Me.tabpEQUIPO.Size = New System.Drawing.Size(952, 494)
+        Me.tabpEQUIPO.Size = New System.Drawing.Size(984, 494)
         Me.tabpEQUIPO.TabIndex = 7
         Me.tabpEQUIPO.Text = "Códigos de equipo"
         '
@@ -785,7 +785,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREBREVEEQUIPO.Name = "txtNOMBREBREVEEQUIPO"
         Me.txtNOMBREBREVEEQUIPO.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREBREVEEQUIPO.TabIndex = 2
-        Me.txtNOMBREBREVEEQUIPO.Text = ""
         '
         'Label1
         '
@@ -809,6 +808,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOEQUIPO.Size = New System.Drawing.Size(108, 56)
         Me.btnNUEVOEQUIPO.TabIndex = 8
         Me.btnNUEVOEQUIPO.Text = "&Nuevo Registro"
+        Me.btnNUEVOEQUIPO.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDAEQUIPO
         '
@@ -819,7 +819,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDAEQUIPO.Name = "txtBUSQUEDAEQUIPO"
         Me.txtBUSQUEDAEQUIPO.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDAEQUIPO.TabIndex = 9
-        Me.txtBUSQUEDAEQUIPO.Text = ""
         '
         'lblBUSQUEDAEQUIPO
         '
@@ -901,7 +900,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREEQUIPOS.Name = "txtNOMBREEQUIPOS"
         Me.txtNOMBREEQUIPOS.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREEQUIPOS.TabIndex = 1
-        Me.txtNOMBREEQUIPOS.Text = ""
         '
         'intCODIGOEQUIPOS
         '
@@ -913,7 +911,6 @@ Public Class CRUDcodigos
         Me.intCODIGOEQUIPOS.Name = "intCODIGOEQUIPOS"
         Me.intCODIGOEQUIPOS.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOEQUIPOS.TabIndex = 0
-        Me.intCODIGOEQUIPOS.Text = ""
         '
         'lblNOMBREEQUIPOS
         '
@@ -971,6 +968,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOPROFESION.Size = New System.Drawing.Size(104, 56)
         Me.btnNUEVOPROFESION.TabIndex = 22
         Me.btnNUEVOPROFESION.Text = "&Nuevo Registro"
+        Me.btnNUEVOPROFESION.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDAPROFESION
         '
@@ -981,7 +979,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDAPROFESION.Name = "txtBUSQUEDAPROFESION"
         Me.txtBUSQUEDAPROFESION.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDAPROFESION.TabIndex = 23
-        Me.txtBUSQUEDAPROFESION.Text = ""
         '
         'lblBUSQUEDAPROFESION
         '
@@ -1063,7 +1060,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREPROFESION.Name = "txtNOMBREPROFESION"
         Me.txtNOMBREPROFESION.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREPROFESION.TabIndex = 16
-        Me.txtNOMBREPROFESION.Text = ""
         '
         'intCODIGOPROFESION
         '
@@ -1075,7 +1071,6 @@ Public Class CRUDcodigos
         Me.intCODIGOPROFESION.Name = "intCODIGOPROFESION"
         Me.intCODIGOPROFESION.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOPROFESION.TabIndex = 15
-        Me.intCODIGOPROFESION.Text = ""
         '
         'lblNOMBREPROFESION
         '
@@ -1134,6 +1129,7 @@ Public Class CRUDcodigos
         Me.lblNUEVOIDIOMA.Size = New System.Drawing.Size(104, 56)
         Me.lblNUEVOIDIOMA.TabIndex = 23
         Me.lblNUEVOIDIOMA.Text = "&Nuevo Registro"
+        Me.lblNUEVOIDIOMA.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDAIDIOMA
         '
@@ -1144,7 +1140,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDAIDIOMA.Name = "txtBUSQUEDAIDIOMA"
         Me.txtBUSQUEDAIDIOMA.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDAIDIOMA.TabIndex = 18
-        Me.txtBUSQUEDAIDIOMA.Text = ""
         '
         'lblBUSQUEDAIDIOMA
         '
@@ -1215,7 +1210,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREIDIOMA.Name = "txtNOMBREIDIOMA"
         Me.txtNOMBREIDIOMA.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREIDIOMA.TabIndex = 13
-        Me.txtNOMBREIDIOMA.Text = ""
         '
         'intCODIGOIDIOMA
         '
@@ -1227,7 +1221,6 @@ Public Class CRUDcodigos
         Me.intCODIGOIDIOMA.Name = "intCODIGOIDIOMA"
         Me.intCODIGOIDIOMA.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOIDIOMA.TabIndex = 12
-        Me.intCODIGOIDIOMA.Text = ""
         '
         'lblNOMBREIDIOMA
         '
@@ -1297,6 +1290,7 @@ Public Class CRUDcodigos
         Me.btnNUEVODIVISIONES.Size = New System.Drawing.Size(104, 56)
         Me.btnNUEVODIVISIONES.TabIndex = 24
         Me.btnNUEVODIVISIONES.Text = "&Nuevo Registro"
+        Me.btnNUEVODIVISIONES.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDADIVISIONES
         '
@@ -1306,7 +1300,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDADIVISIONES.Name = "txtBUSQUEDADIVISIONES"
         Me.txtBUSQUEDADIVISIONES.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDADIVISIONES.TabIndex = 18
-        Me.txtBUSQUEDADIVISIONES.Text = ""
         '
         'lblBUSQUEDADIVISIONES
         '
@@ -1385,7 +1378,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREDIVISIONES.Name = "txtNOMBREDIVISIONES"
         Me.txtNOMBREDIVISIONES.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREDIVISIONES.TabIndex = 13
-        Me.txtNOMBREDIVISIONES.Text = ""
         '
         'intCODIGODIVISIONES
         '
@@ -1396,7 +1388,6 @@ Public Class CRUDcodigos
         Me.intCODIGODIVISIONES.Name = "intCODIGODIVISIONES"
         Me.intCODIGODIVISIONES.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGODIVISIONES.TabIndex = 12
-        Me.intCODIGODIVISIONES.Text = ""
         '
         'lblNOMBRE
         '
@@ -1455,6 +1446,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOPARENTESCO.Size = New System.Drawing.Size(102, 56)
         Me.btnNUEVOPARENTESCO.TabIndex = 24
         Me.btnNUEVOPARENTESCO.Text = "&Nuevo Registro"
+        Me.btnNUEVOPARENTESCO.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDAPARENTESCO
         '
@@ -1465,7 +1457,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDAPARENTESCO.Name = "txtBUSQUEDAPARENTESCO"
         Me.txtBUSQUEDAPARENTESCO.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDAPARENTESCO.TabIndex = 18
-        Me.txtBUSQUEDAPARENTESCO.Text = ""
         '
         'lblBUSQUEDAPARENTESCO
         '
@@ -1547,7 +1538,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREPARENTESCO.Name = "txtNOMBREPARENTESCO"
         Me.txtNOMBREPARENTESCO.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREPARENTESCO.TabIndex = 13
-        Me.txtNOMBREPARENTESCO.Text = ""
         '
         'intCODIGOPARENTESCO
         '
@@ -1559,7 +1549,6 @@ Public Class CRUDcodigos
         Me.intCODIGOPARENTESCO.Name = "intCODIGOPARENTESCO"
         Me.intCODIGOPARENTESCO.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOPARENTESCO.TabIndex = 12
-        Me.intCODIGOPARENTESCO.Text = ""
         '
         'lblNOMBREPARENTESCO
         '
@@ -1619,7 +1608,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREBREVEESTADIO.Name = "txtNOMBREBREVEESTADIO"
         Me.txtNOMBREBREVEESTADIO.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREBREVEESTADIO.TabIndex = 2
-        Me.txtNOMBREBREVEESTADIO.Text = ""
         '
         'Label2
         '
@@ -1643,6 +1631,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOESTADIO.Size = New System.Drawing.Size(104, 56)
         Me.btnNUEVOESTADIO.TabIndex = 7
         Me.btnNUEVOESTADIO.Text = "&Nuevo Registro"
+        Me.btnNUEVOESTADIO.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDAESTADIO
         '
@@ -1653,7 +1642,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDAESTADIO.Name = "txtBUSQUEDAESTADIO"
         Me.txtBUSQUEDAESTADIO.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDAESTADIO.TabIndex = 8
-        Me.txtBUSQUEDAESTADIO.Text = ""
         '
         'lblBUSQUEDAESTADIO
         '
@@ -1734,7 +1722,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREESTADIO.Name = "txtNOMBREESTADIO"
         Me.txtNOMBREESTADIO.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREESTADIO.TabIndex = 1
-        Me.txtNOMBREESTADIO.Text = ""
         '
         'intCODIGOESTADIO
         '
@@ -1746,7 +1733,6 @@ Public Class CRUDcodigos
         Me.intCODIGOESTADIO.Name = "intCODIGOESTADIO"
         Me.intCODIGOESTADIO.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOESTADIO.TabIndex = 0
-        Me.intCODIGOESTADIO.Text = ""
         '
         'lblNOMBREESTADIO
         '
@@ -1806,6 +1792,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOPAIS.Size = New System.Drawing.Size(110, 56)
         Me.btnNUEVOPAIS.TabIndex = 24
         Me.btnNUEVOPAIS.Text = "&Nuevo Registro"
+        Me.btnNUEVOPAIS.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDAPAIS
         '
@@ -1815,7 +1802,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDAPAIS.Name = "txtBUSQUEDAPAIS"
         Me.txtBUSQUEDAPAIS.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDAPAIS.TabIndex = 18
-        Me.txtBUSQUEDAPAIS.Text = ""
         '
         'lblBUSQUEDAPAIS
         '
@@ -1895,7 +1881,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREPAIS.Name = "txtNOMBREPAIS"
         Me.txtNOMBREPAIS.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREPAIS.TabIndex = 13
-        Me.txtNOMBREPAIS.Text = ""
         '
         'intCODIGOPAIS
         '
@@ -1906,7 +1891,6 @@ Public Class CRUDcodigos
         Me.intCODIGOPAIS.Name = "intCODIGOPAIS"
         Me.intCODIGOPAIS.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOPAIS.TabIndex = 12
-        Me.intCODIGOPAIS.Text = ""
         '
         'lblNOMBREPAIS
         '
@@ -1965,6 +1949,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOTIPODOCUMENTO.Size = New System.Drawing.Size(110, 56)
         Me.btnNUEVOTIPODOCUMENTO.TabIndex = 6
         Me.btnNUEVOTIPODOCUMENTO.Text = "&Nuevo Registro"
+        Me.btnNUEVOTIPODOCUMENTO.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDATIPODOCUMENTO
         '
@@ -1975,7 +1960,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDATIPODOCUMENTO.Name = "txtBUSQUEDATIPODOCUMENTO"
         Me.txtBUSQUEDATIPODOCUMENTO.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDATIPODOCUMENTO.TabIndex = 7
-        Me.txtBUSQUEDATIPODOCUMENTO.Text = ""
         '
         'lblBUSQUEDATIPODOCUMENTO
         '
@@ -2056,7 +2040,6 @@ Public Class CRUDcodigos
         Me.txtNOMBRETIPODOCUMENTO.Name = "txtNOMBRETIPODOCUMENTO"
         Me.txtNOMBRETIPODOCUMENTO.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBRETIPODOCUMENTO.TabIndex = 1
-        Me.txtNOMBRETIPODOCUMENTO.Text = ""
         '
         'intCODIGOTIPODOCUMENTO
         '
@@ -2068,7 +2051,6 @@ Public Class CRUDcodigos
         Me.intCODIGOTIPODOCUMENTO.Name = "intCODIGOTIPODOCUMENTO"
         Me.intCODIGOTIPODOCUMENTO.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOTIPODOCUMENTO.TabIndex = 0
-        Me.intCODIGOTIPODOCUMENTO.Text = ""
         '
         'lblNOMBRETIPODOCUMENTO
         '
@@ -2132,7 +2114,6 @@ Public Class CRUDcodigos
         Me.intMONTOCONCEPTO.Name = "intMONTOCONCEPTO"
         Me.intMONTOCONCEPTO.Size = New System.Drawing.Size(392, 26)
         Me.intMONTOCONCEPTO.TabIndex = 3
-        Me.intMONTOCONCEPTO.Text = ""
         '
         'lblMONTOCONCEPTO
         '
@@ -2177,7 +2158,6 @@ Public Class CRUDcodigos
         Me.txtNOMBREBREVECONCEPTO.Name = "txtNOMBREBREVECONCEPTO"
         Me.txtNOMBREBREVECONCEPTO.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBREBREVECONCEPTO.TabIndex = 2
-        Me.txtNOMBREBREVECONCEPTO.Text = ""
         '
         'lblNOMBREBREVECONCEPTO
         '
@@ -2201,6 +2181,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOCONCEPTO.Size = New System.Drawing.Size(104, 56)
         Me.btnNUEVOCONCEPTO.TabIndex = 12
         Me.btnNUEVOCONCEPTO.Text = "&Nuevo Registro"
+        Me.btnNUEVOCONCEPTO.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDACONCEPTO
         '
@@ -2211,7 +2192,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDACONCEPTO.Name = "txtBUSQUEDACONCEPTO"
         Me.txtBUSQUEDACONCEPTO.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDACONCEPTO.TabIndex = 10
-        Me.txtBUSQUEDACONCEPTO.Text = ""
         '
         'lblBUSQUEDACONCEPTO
         '
@@ -2293,7 +2273,6 @@ Public Class CRUDcodigos
         Me.txtNOMBRECONCEPTO.Name = "txtNOMBRECONCEPTO"
         Me.txtNOMBRECONCEPTO.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBRECONCEPTO.TabIndex = 1
-        Me.txtNOMBRECONCEPTO.Text = ""
         '
         'intCODIGOCONCEPTO
         '
@@ -2305,7 +2284,6 @@ Public Class CRUDcodigos
         Me.intCODIGOCONCEPTO.Name = "intCODIGOCONCEPTO"
         Me.intCODIGOCONCEPTO.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOCONCEPTO.TabIndex = 0
-        Me.intCODIGOCONCEPTO.Text = ""
         '
         'lblNOMBRECONCEPTO
         '
@@ -2366,7 +2344,6 @@ Public Class CRUDcodigos
         Me.txtNIVELCATEGORIA.Name = "txtNIVELCATEGORIA"
         Me.txtNIVELCATEGORIA.Size = New System.Drawing.Size(392, 26)
         Me.txtNIVELCATEGORIA.TabIndex = 2
-        Me.txtNIVELCATEGORIA.Text = ""
         '
         'lblNIVEL
         '
@@ -2390,6 +2367,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOCATEGORIA.Size = New System.Drawing.Size(108, 56)
         Me.btnNUEVOCATEGORIA.TabIndex = 7
         Me.btnNUEVOCATEGORIA.Text = "&Nuevo Registro"
+        Me.btnNUEVOCATEGORIA.UseVisualStyleBackColor = False
         '
         'txtBUSQUEDACATEGORIA
         '
@@ -2400,7 +2378,6 @@ Public Class CRUDcodigos
         Me.txtBUSQUEDACATEGORIA.Name = "txtBUSQUEDACATEGORIA"
         Me.txtBUSQUEDACATEGORIA.Size = New System.Drawing.Size(336, 26)
         Me.txtBUSQUEDACATEGORIA.TabIndex = 8
-        Me.txtBUSQUEDACATEGORIA.Text = ""
         '
         'lblBUSQUEDACATEGORIA
         '
@@ -2481,7 +2458,6 @@ Public Class CRUDcodigos
         Me.txtNOMBRECATEGORIA.Name = "txtNOMBRECATEGORIA"
         Me.txtNOMBRECATEGORIA.Size = New System.Drawing.Size(392, 26)
         Me.txtNOMBRECATEGORIA.TabIndex = 1
-        Me.txtNOMBRECATEGORIA.Text = ""
         '
         'txtCODIGOCATEGORIA
         '
@@ -2493,7 +2469,6 @@ Public Class CRUDcodigos
         Me.txtCODIGOCATEGORIA.Name = "txtCODIGOCATEGORIA"
         Me.txtCODIGOCATEGORIA.Size = New System.Drawing.Size(192, 26)
         Me.txtCODIGOCATEGORIA.TabIndex = 0
-        Me.txtCODIGOCATEGORIA.Text = ""
         '
         'lblNOMBRECATEGORIA
         '
@@ -2553,7 +2528,6 @@ Public Class CRUDcodigos
         Me.intMONTOASIGNADOMANTENIMIENTOCAPITAL.Name = "intMONTOASIGNADOMANTENIMIENTOCAPITAL"
         Me.intMONTOASIGNADOMANTENIMIENTOCAPITAL.Size = New System.Drawing.Size(392, 26)
         Me.intMONTOASIGNADOMANTENIMIENTOCAPITAL.TabIndex = 3
-        Me.intMONTOASIGNADOMANTENIMIENTOCAPITAL.Text = ""
         '
         'lblMONTOASIGNADOMANTENIMIENTOCAPITAL
         '
@@ -2577,7 +2551,6 @@ Public Class CRUDcodigos
         Me.intMONTOFINALMANTENIMIENTOCAPITAL.Name = "intMONTOFINALMANTENIMIENTOCAPITAL"
         Me.intMONTOFINALMANTENIMIENTOCAPITAL.Size = New System.Drawing.Size(392, 26)
         Me.intMONTOFINALMANTENIMIENTOCAPITAL.TabIndex = 2
-        Me.intMONTOFINALMANTENIMIENTOCAPITAL.Text = ""
         '
         'lblMONTOFINALMANTENIMIENTOCAPITAL
         '
@@ -2601,6 +2574,7 @@ Public Class CRUDcodigos
         Me.btnNUEVOMANTENIMIENTOCAPITAL.Size = New System.Drawing.Size(110, 56)
         Me.btnNUEVOMANTENIMIENTOCAPITAL.TabIndex = 8
         Me.btnNUEVOMANTENIMIENTOCAPITAL.Text = "&Nuevo Registro"
+        Me.btnNUEVOMANTENIMIENTOCAPITAL.UseVisualStyleBackColor = False
         '
         'btnCANCELARMANTENIMIENTOCAPITAL
         '
@@ -2669,7 +2643,6 @@ Public Class CRUDcodigos
         Me.intMONTOINICIALMANTENIMIENTOCAPITAL.Name = "intMONTOINICIALMANTENIMIENTOCAPITAL"
         Me.intMONTOINICIALMANTENIMIENTOCAPITAL.Size = New System.Drawing.Size(392, 26)
         Me.intMONTOINICIALMANTENIMIENTOCAPITAL.TabIndex = 1
-        Me.intMONTOINICIALMANTENIMIENTOCAPITAL.Text = ""
         '
         'intCODIGOMANTENIMIENTOCAPITAL
         '
@@ -2681,7 +2654,6 @@ Public Class CRUDcodigos
         Me.intCODIGOMANTENIMIENTOCAPITAL.Name = "intCODIGOMANTENIMIENTOCAPITAL"
         Me.intCODIGOMANTENIMIENTOCAPITAL.Size = New System.Drawing.Size(192, 26)
         Me.intCODIGOMANTENIMIENTOCAPITAL.TabIndex = 0
-        Me.intCODIGOMANTENIMIENTOCAPITAL.Text = ""
         '
         'lblMONTOINICIALMANTENIMIENTOCAPITAL
         '
@@ -2709,7 +2681,7 @@ Public Class CRUDcodigos
         '
         'btnVOLVER
         '
-        Me.btnVOLVER.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.btnVOLVER.BackColor = System.Drawing.SystemColors.Control
         Me.btnVOLVER.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVOLVER.ForeColor = System.Drawing.Color.Red
         Me.btnVOLVER.Location = New System.Drawing.Point(240, 120)
@@ -2717,10 +2689,11 @@ Public Class CRUDcodigos
         Me.btnVOLVER.Size = New System.Drawing.Size(752, 48)
         Me.btnVOLVER.TabIndex = 1
         Me.btnVOLVER.Text = "&VOLVER AL MENU PRINCIPAL"
+        Me.btnVOLVER.UseVisualStyleBackColor = False
         '
         'lblFECHAHORA
         '
-        Me.lblFECHAHORA.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.lblFECHAHORA.BackColor = System.Drawing.SystemColors.Control
         Me.lblFECHAHORA.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFECHAHORA.Location = New System.Drawing.Point(240, 56)
         Me.lblFECHAHORA.Name = "lblFECHAHORA"
@@ -2789,7 +2762,7 @@ Public Class CRUDcodigos
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1000, 746)
+        Me.ClientSize = New System.Drawing.Size(1000, 628)
         Me.Controls.Add(Me.lblUSUARIO)
         Me.Controls.Add(Me.lblUSUARIOACTUAL)
         Me.Controls.Add(Me.lblFECHAHORA)
@@ -2801,30 +2774,43 @@ Public Class CRUDcodigos
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.Text = "Administración de Códigos - C.P.A.F. - Sistema Delta"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.pctboxLOGOTIPOCPAF, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabCODIGOS.ResumeLayout(False)
         Me.tabpCIUDAD.ResumeLayout(False)
+        Me.tabpCIUDAD.PerformLayout()
         CType(Me.dtaCIUDAD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpEQUIPO.ResumeLayout(False)
+        Me.tabpEQUIPO.PerformLayout()
         CType(Me.dtaEQUIPO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpPROFESION.ResumeLayout(False)
+        Me.tabpPROFESION.PerformLayout()
         CType(Me.dtaPROFESION, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpIDIOMA.ResumeLayout(False)
+        Me.tabpIDIOMA.PerformLayout()
         CType(Me.dtaIDIOMA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpDIVISION.ResumeLayout(False)
+        Me.tabpDIVISION.PerformLayout()
         CType(Me.dtaDIVISIONES, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpparentesco.ResumeLayout(False)
+        Me.tabpparentesco.PerformLayout()
         CType(Me.dtaPARENTESCO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpESTADIO.ResumeLayout(False)
+        Me.tabpESTADIO.PerformLayout()
         CType(Me.dtaESTADIO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpPAIS.ResumeLayout(False)
+        Me.tabpPAIS.PerformLayout()
         CType(Me.dtaPAIS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpTIPODOCUMENTO.ResumeLayout(False)
+        Me.tabpTIPODOCUMENTO.PerformLayout()
         CType(Me.dtaTIPODOCUMENTO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpCONCEPTO.ResumeLayout(False)
+        Me.tabpCONCEPTO.PerformLayout()
         CType(Me.dtaCONCEPTO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpcategoria.ResumeLayout(False)
+        Me.tabpcategoria.PerformLayout()
         CType(Me.dtaCATEGORIA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabpmantcapital.ResumeLayout(False)
+        Me.tabpmantcapital.PerformLayout()
         CType(Me.dtaMANTENIMIENTOCAPITAL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
