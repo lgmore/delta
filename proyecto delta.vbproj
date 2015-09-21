@@ -334,6 +334,12 @@
     <Compile Include="frmRECIBOREP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRENDICIONTESORERIA.Designer.vb">
+      <DependentUpon>frmRENDICIONTESORERIA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRENDICIONTESORERIA.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmREPORTE.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -533,6 +539,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRECIBOREP.resx">
       <DependentUpon>frmRECIBOREP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRENDICIONTESORERIA.resx">
+      <DependentUpon>frmRENDICIONTESORERIA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmREPORTE.resx">
       <DependentUpon>frmREPORTE.vb</DependentUpon>

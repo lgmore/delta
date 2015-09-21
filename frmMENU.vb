@@ -96,6 +96,7 @@ Public Class frmMENU
     Friend WithEvents MenuItem9 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem10 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem11 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem12 As System.Windows.Forms.MenuItem
     Friend WithEvents mnuFACTURAS As System.Windows.Forms.MenuItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -130,12 +131,15 @@ Public Class frmMENU
         Me.tbbSEPARADOR2 = New System.Windows.Forms.ToolBarButton()
         Me.tbbREPORTE = New System.Windows.Forms.ToolBarButton()
         Me.mnuREPORTE = New System.Windows.Forms.ContextMenu()
+        Me.MenuItem8 = New System.Windows.Forms.MenuItem()
         Me.mnuRECIBODINERO = New System.Windows.Forms.MenuItem()
         Me.mnuFACURAREP = New System.Windows.Forms.MenuItem()
         Me.mnuSOCIOPROMO = New System.Windows.Forms.MenuItem()
         Me.mnuBANCOS = New System.Windows.Forms.MenuItem()
         Me.mnuDISKETTES = New System.Windows.Forms.MenuItem()
         Me.MenuItem4 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem9 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem()
         Me.tbbSEPARADOR3 = New System.Windows.Forms.ToolBarButton()
         Me.tbbSALIR = New System.Windows.Forms.ToolBarButton()
         Me.MainMenu1 = New System.Windows.Forms.MainMenu(Me.components)
@@ -162,12 +166,10 @@ Public Class frmMENU
         Me.mnuBANCO = New System.Windows.Forms.MenuItem()
         Me.mnuDISKETTE = New System.Windows.Forms.MenuItem()
         Me.MenuItem3 = New System.Windows.Forms.MenuItem()
-        Me.mnuSALIRSIST = New System.Windows.Forms.MenuItem()
         Me.MenuItem7 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem8 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem9 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem10 = New System.Windows.Forms.MenuItem()
         Me.MenuItem11 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem12 = New System.Windows.Forms.MenuItem()
+        Me.mnuSALIRSIST = New System.Windows.Forms.MenuItem()
         Me.SuspendLayout()
         '
         'ImageList1
@@ -355,35 +357,50 @@ Public Class frmMENU
         '
         Me.mnuREPORTE.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem8, Me.mnuRECIBODINERO, Me.mnuFACURAREP, Me.mnuSOCIOPROMO, Me.mnuBANCOS, Me.mnuDISKETTES, Me.MenuItem4, Me.MenuItem9, Me.MenuItem10})
         '
+        'MenuItem8
+        '
+        Me.MenuItem8.Index = 0
+        Me.MenuItem8.Text = "RENDICION DE TESORERIA"
+        '
         'mnuRECIBODINERO
         '
-        Me.mnuRECIBODINERO.Index = 0
+        Me.mnuRECIBODINERO.Index = 1
         Me.mnuRECIBODINERO.Text = "RECIBO"
         '
         'mnuFACURAREP
         '
-        Me.mnuFACURAREP.Index = 1
+        Me.mnuFACURAREP.Index = 2
         Me.mnuFACURAREP.Text = "AUTOFACTURA"
         '
         'mnuSOCIOPROMO
         '
-        Me.mnuSOCIOPROMO.Index = 2
+        Me.mnuSOCIOPROMO.Index = 3
         Me.mnuSOCIOPROMO.Text = "SOCIO POR PROMOCIÓN"
         '
         'mnuBANCOS
         '
-        Me.mnuBANCOS.Index = 3
+        Me.mnuBANCOS.Index = 4
         Me.mnuBANCOS.Text = "BANCO"
         '
         'mnuDISKETTES
         '
-        Me.mnuDISKETTES.Index = 4
+        Me.mnuDISKETTES.Index = 5
         Me.mnuDISKETTES.Text = "DISKETTE"
         '
         'MenuItem4
         '
-        Me.MenuItem4.Index = 5
+        Me.MenuItem4.Index = 6
         Me.MenuItem4.Text = "IVA"
+        '
+        'MenuItem9
+        '
+        Me.MenuItem9.Index = 7
+        Me.MenuItem9.Text = "SOCIOS AL DIA"
+        '
+        'MenuItem10
+        '
+        Me.MenuItem10.Index = 8
+        Me.MenuItem10.Text = "SOCIOS MOROSOS"
         '
         'tbbSEPARADOR3
         '
@@ -488,7 +505,7 @@ Public Class frmMENU
         'mnuREPORTES
         '
         Me.mnuREPORTES.Index = 3
-        Me.mnuREPORTES.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBOREP, Me.mnuAUTOFACTURAREP, Me.mnuSOCIOPROMOCION, Me.mnuBANCO, Me.mnuDISKETTE, Me.MenuItem3, Me.MenuItem7, Me.MenuItem11})
+        Me.mnuREPORTES.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuRECIBOREP, Me.mnuAUTOFACTURAREP, Me.mnuSOCIOPROMOCION, Me.mnuBANCO, Me.mnuDISKETTE, Me.MenuItem3, Me.MenuItem7, Me.MenuItem11, Me.MenuItem12})
         Me.mnuREPORTES.Text = "REPORTE"
         '
         'mnuRECIBOREP
@@ -521,35 +538,25 @@ Public Class frmMENU
         Me.MenuItem3.Index = 5
         Me.MenuItem3.Text = "IVA"
         '
-        'mnuSALIRSIST
-        '
-        Me.mnuSALIRSIST.Index = 4
-        Me.mnuSALIRSIST.Text = "SALIR "
-        '
         'MenuItem7
         '
         Me.MenuItem7.Index = 6
         Me.MenuItem7.Text = "SOCIOS AL DIA"
         '
-        'MenuItem8
-        '
-        Me.MenuItem8.Index = 0
-        Me.MenuItem8.Text = ""
-        '
-        'MenuItem9
-        '
-        Me.MenuItem9.Index = 7
-        Me.MenuItem9.Text = "SOCIOS AL DIA"
-        '
-        'MenuItem10
-        '
-        Me.MenuItem10.Index = 8
-        Me.MenuItem10.Text = "SOCIOS MOROSOS"
-        '
         'MenuItem11
         '
         Me.MenuItem11.Index = 7
         Me.MenuItem11.Text = "SOCIOS MOROSOS"
+        '
+        'MenuItem12
+        '
+        Me.MenuItem12.Index = 8
+        Me.MenuItem12.Text = "RENDICION DE TESORERIA"
+        '
+        'mnuSALIRSIST
+        '
+        Me.mnuSALIRSIST.Index = 4
+        Me.mnuSALIRSIST.Text = "SALIR "
         '
         'frmMENU
         '
@@ -844,5 +851,18 @@ Public Class frmMENU
 
 
         frmnew.ShowDialog(Me)
+    End Sub
+
+    Private Sub MenuItem12_Click(sender As Object, e As EventArgs) Handles MenuItem12.Click
+
+        Dim frmnew As New frmRENDICIONTESORERIA
+        frmnew.ShowDialog(Me)
+
+    End Sub
+
+    Private Sub MenuItem8_Click(sender As Object, e As EventArgs) Handles MenuItem8.Click
+        Dim frmnew As New frmRENDICIONTESORERIA
+        frmnew.ShowDialog(Me)
+
     End Sub
 End Class
